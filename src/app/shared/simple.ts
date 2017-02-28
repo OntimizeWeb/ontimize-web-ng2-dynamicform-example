@@ -2,32 +2,24 @@ export const FORM: any = {
     "title": "Simple Form",
     "components": [
         {
-            "input": true,
-            "tableView": true,
-            "inputType": "text",
-            "inputMask": "",
             "label": "First Name",
-            "key": "firstName",
-            "placeholder": "Enter your first name",
-            "prefix": "",
-            "suffix": "",
-            "multiple": false,
-            "defaultValue": "",
-            "protected": false,
-            "unique": false,
-            "persistent": true,
+            "attr": "firstName",
+            "enabled": true,
             "validate": {
                 "required": true,
                 "minLength": 2,
-                "maxLength": 10,
-                "pattern": "",
-                "custom": "",
-                "customPrivate": false
+                "maxLength": 10
             },
-            "conditional": {
-                "show": "",
-                "when": null,
-                "eq": ""
+            "type": "o-text-input"
+        },
+        {
+            "label": "Surname",
+            "attr": "surname",
+            "enabled": true,
+            "validate": {
+                "required": true,
+                "minLength": 2,
+                "maxLength": 10
             },
             "type": "o-text-input"
         }

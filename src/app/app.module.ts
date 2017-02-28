@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule, Injector }      from '@angular/core';
 
 import {
   ONTIMIZE_MODULES,
@@ -11,7 +11,7 @@ import { CONFIG } from './app.config';
 import { AppComponent }  from './app.component';
 import { routing } from './app.routes';
 import { APP_DIRECTIVES } from './app.directives';
-import { NavigationBarService } from './shared/navigation-bar.service';
+import { NavigationBarService, CustomOntimizeService } from './shared';
 
 import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 
@@ -25,7 +25,12 @@ let standardProviders = ontimizeProviders({
 });
 // Defining custom providers (if needed)...
 let customProviders = [
-    NavigationBarService
+  NavigationBarService,
+  {
+    provide: CustomOntimizeService,
+    useFactory: (injector) => new CustomOntimizeService(injector),
+    deps: [Injector]
+  }
 ];
 
 @NgModule({

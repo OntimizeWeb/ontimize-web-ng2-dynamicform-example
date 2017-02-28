@@ -1,6 +1,7 @@
 import {Config} from 'ontimize-web-ng2/ontimize';
 
-import { SERVICE_CONFIG } from './shared/app.services.config';
+// import { SERVICE_CONFIG } from './shared/app.services.config';
+import { CustomOntimizeService } from './shared';
 
 export const CONFIG: Config = {
   // The base path of the URL used by app services.
@@ -16,8 +17,8 @@ export const CONFIG: Config = {
   locale: 'en',
 
   // The service type used (Ontimize REST standart, Ontimize REST JEE or custom implementation) in the whole application.
-  // serviceType
+  serviceType: CustomOntimizeService,
 
   // Configuration parameters of application services.
-  servicesConfiguration: SERVICE_CONFIG
+  // servicesConfiguration: SERVICE_CONFIG
 };
