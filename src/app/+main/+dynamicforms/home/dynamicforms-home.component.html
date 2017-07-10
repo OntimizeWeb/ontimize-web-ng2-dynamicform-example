@@ -1,0 +1,25 @@
+<div layout="column" layout-align="center" layout-fill>
+
+  <!--
+  <div layout="row" layout-align="center" flex="80">-->
+<!--sort-columns="FORM_NAME;FORM_DESCRIPTION;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE"-->
+  <o-table #table title="DYNAMICFORMS" detail-button-in-row="yes" edit-button-in-row="yes"
+    columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE;JSON"
+    visible-columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE"
+
+    entity="EDynamicForms"
+    keys="VERSION_ID" select-all-checkbox="no" row-height="small">
+
+    <!--<o-table-column attr="FORM_ID" title="FORM_ID" orderable="no"></o-table-column>-->
+    <o-table-column attr="VERSION_ID" title="VERSION_ID" orderable="no"></o-table-column>
+
+    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column>
+      <o-table-cell-renderer-action (onClick)="editDynamicFormData($event)" render-type="icon" render-value="storage" action-title="DATA">
+      </o-table-cell-renderer-action>
+    </o-table-column>
+  </o-table>
+
+  <!--</div>-->
+</div>

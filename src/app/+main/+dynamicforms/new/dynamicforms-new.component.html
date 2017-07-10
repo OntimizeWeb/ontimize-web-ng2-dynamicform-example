@@ -1,0 +1,15 @@
+<div layout="column" layout-align="center" layout-fill>
+
+  <dynamicforms-new-form #oForm layout-fill layout="column"
+    show-header="yes"
+    columns="VERSION_ID;JSON"
+    entity="EDynamicForms" keys="VERSION_ID"
+    insert-method="insertDynamicForm">
+
+    <div layout="column" layout-align="center" layout-fill>
+      <o-dynamic-form-builder #oDynamicFormBuilder>
+      </o-dynamic-form-builder>
+    </div>
+
+  </dynamicforms-new-form>
+</div>

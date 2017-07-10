@@ -1,0 +1,29 @@
+<div layout="column" layout-align="center" layout-fill>
+  <o-button type="RAISED" label="CONSULTAR" (click)="onclick()"></o-button>
+
+  <div layout="row" layout-align="center" flex="80">
+    <!--entity="EUsers" keys="USER_"-->
+    <o-form #oForm layout="column" query-on-init="false" entity="EData" keys="DATA_ID" parent-keys="FORM_VERSION_ID:VERSION_ID"
+      show-header="yes" header-mode="none" label-header="OForm component" header-actions="" columns="FORM_VERSION_ID;DATA_ID"
+      flex="75" class="md-whiteframe-4dp">
+
+
+      <div layout="column">
+        <div style="text-align:center;">
+          <h1>DynamicForm with System JS.</h1>
+        </div>
+        <o-dynamic-form #oDynamicForm attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID"></o-dynamic-form>
+      </div>
+
+
+      <!--<div layout="column" layout-align="center" layout-fill>
+        <o-dynamic-form-builder #oDynamicFormBuilder [form-definition]="formDefinitionStored">
+        </o-dynamic-form-builder>
+      </div>-->
+
+    </o-form>
+
+
+
+  </div>
+</div>
