@@ -1,0 +1,15 @@
+{
+  "VIEW": "Vistas",
+  "FORMS": "Formularios",
+  "DATA": "Datos",
+  "VERSION": "Versión",
+  "FORM_ID": "ID",
+  "FORM_NAME": "Nombre",
+  "FORM_DESCRIPTION": "Descripción",
+  "VERSION_ID": "Versión",
+  "VERSION_NAME": "Nombre de versión",
+  "CREATION_DATE": "Fecha",
+  "LAST_MODIFICATION_DATE": "Última modificación",
+  "DATA_ID": "ID",
+  "FORM_VERSION_ID": "Versión del formulario"
+}

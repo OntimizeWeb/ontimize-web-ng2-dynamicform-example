@@ -1,0 +1,31 @@
+<div layout="column" layout-align="center" layout-fill>
+
+
+  <div layout="row" layout-align="center" flex="80">
+
+    <!--<o-form #oForm layout="column" query-on-init="false" entity="EData" keys="DATA_ID" parent-keys="FORM_VERSION_ID:VERSION_ID"
+      show-header="yes" header-mode="none" label-header="OForm component" header-actions="" columns="FORM_VERSION_ID;DATA_ID"
+      flex="75" class="md-whiteframe-4dp">-->
+
+
+    <!---->
+    <!--parent-keys="FORM_VERSION_ID:VERSION_ID"-->
+    <data-detail-form #oForm layout="column" query-on-init="true" entity="EData"
+      keys="DATA_ID;FORM_VERSION_ID" show-header="yes"
+      header-mode="none" label-header="OForm component" header-actions="R;U"
+      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA"
+      flex="75" class="md-whiteframe-4dp"
+      (onFormDataLoaded)="onFormDataLoaded($event)">
+
+      <div layout="column">
+        <o-dynamic-form #dynamicForm automatic-binding="no" query-on-init="false" attr="JSON"
+          entity="EDynamicFormsVersions" parent-keys="VERSION_ID:FORM_VERSION_ID"
+          (render)="onDynamicFormDataLoaded($event)">
+        </o-dynamic-form>
+      </div>
+    </data-detail-form>
+
+
+
+  </div>
+</div>

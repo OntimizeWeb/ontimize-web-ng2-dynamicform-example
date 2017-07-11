@@ -1,0 +1,11 @@
+<div layout="column" layout-align="center" layout-fill>
+
+  <o-table #table title="DATA" columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID" visible-columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID"
+    entity="EData" keys="DATA_ID" select-all-checkbox="yes" row-height="small" detail-button-in-row="yes" edit-button-in-row="yes"
+    insert-button="no">
+
+    <o-table-column attr="DATA_ID" title="DATA_ID" orderable="no"></o-table-column>
+    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
+  </o-table>
+</div>

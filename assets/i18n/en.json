@@ -1,0 +1,15 @@
+{
+  "VIEW": "Views",
+  "FORMS": "Forms",
+  "DATA": "Data",
+  "VERSION": "Version",
+  "FORM_ID": "ID",
+  "FORM_NAME": "Name",
+  "FORM_DESCRIPTION": "Description",
+  "VERSION_ID": "Version",
+  "VERSION_NAME": "Version name",
+  "CREATION_DATE": "Date",
+  "LAST_MODIFICATION_DATE": "Last modification",
+  "DATA_ID": "ID",
+  "FORM_VERSION_ID": "Form version"
+}

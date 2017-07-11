@@ -1,0 +1,7 @@
+dynamicforms-new-form form.inner-form > div {
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
