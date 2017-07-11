@@ -51,11 +51,5 @@ export class DynamicFormsEditComponent implements OnInit {
     }
   }
 
-  onFormDataLoaded(data) {
-    var self = this;
-    setTimeout(function () {
-      self.dynamicFormBuilder.formDefinition = self.form.getDataValue('JSON').value;
-    }, 0);
-  }
 
 }

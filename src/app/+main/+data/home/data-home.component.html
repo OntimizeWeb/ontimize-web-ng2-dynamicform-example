@@ -1,21 +1,11 @@
 <div layout="column" layout-align="center" layout-fill>
 
-  <!--
-  <div layout="row" layout-align="center" flex="80">-->
-<!--sort-columns="FORM_NAME;FORM_DESCRIPTION;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE"-->
-  <o-table #table title="DATA"
-    columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_dATA"
-    visible-columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID"
-    entity="EData"
-    keys="DATA_ID" select-all-checkbox="no" row-height="small"
-    detail-button-in-row="no" edit-button-in-row="no">
+  <o-table #table title="DATA" columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID" visible-columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID"
+    entity="EData" keys="DATA_ID" select-all-checkbox="yes" row-height="small" detail-button-in-row="yes" edit-button-in-row="yes"
+    insert-button="no">
 
-    <!--<o-table-column attr="FORM_ID" title="FORM_ID" orderable="no"></o-table-column>-->
     <o-table-column attr="DATA_ID" title="DATA_ID" orderable="no"></o-table-column>
-
     <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
     <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
   </o-table>
-
-  <!--</div>-->
 </div>

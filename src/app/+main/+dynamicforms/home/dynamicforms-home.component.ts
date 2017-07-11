@@ -57,4 +57,20 @@ export class DynamicFormsHomeComponent implements OnInit {
     }
   }
 
+  addDynamicFormData(item: any) {
+    if (item.hasOwnProperty('VERSION_ID')) {
+      let route = [item['VERSION_ID']];
+      route.push('data');
+      this.router.navigate(
+        route,
+        {
+          relativeTo: this.actRoute,
+          queryParams: {
+            'isdetail': 'true'
+          }
+        }
+      );
+    }
+  }
+
 }

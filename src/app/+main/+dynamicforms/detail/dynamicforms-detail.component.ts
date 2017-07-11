@@ -42,16 +42,16 @@ export class DynamicFormsDetailComponent implements OnInit {
   ) {
   }
 
-  onclick() {
-    this.formDefinitionStored = JSON.stringify({
-      'title': '',
-      'components': [
-        { 'attr': 'NAME', 'label': 'Nombre', 'ontimize-directive': 'o-text-input' },
-        { 'attr': 'AGE', 'label': 'Edad', 'ontimize-directive': 'o-integer-input' },
-        { 'attr': 'ID', 'label': 'DNI', 'ontimize-directive': 'o-nif-input' }
-      ]
-    });
-  }
+  // onclick() {
+  //   this.formDefinitionStored = JSON.stringify({
+  //     'title': '',
+  //     'components': [
+  //       { 'attr': 'NAME', 'label': 'Nombre', 'ontimize-directive': 'o-text-input' },
+  //       { 'attr': 'AGE', 'label': 'Edad', 'ontimize-directive': 'o-integer-input' },
+  //       { 'attr': 'ID', 'label': 'DNI', 'ontimize-directive': 'o-nif-input' }
+  //     ]
+  //   });
+  // }
 
   ngOnInit() {
     let title = '';

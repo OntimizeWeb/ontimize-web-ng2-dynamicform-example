@@ -1,33 +1,15 @@
 {
-  "APP_TITLE" : "Playground",
-
-  "INTRODUCTION": "Introducción",
-  "INPUT" : "Campos",
-  "BUTTON" : "Botones",
-  "DATA" : "Datos",
-  "MEDIA" : "Media",
-  "LAYOUT" : "Layout",
-  "MENU" : "Menú",
-  "MODALS": "Ventanas",
-
-  "HOME" : "Inicio",
-  "BUTTONS" : "Botones",
-  "CHECKBOX" : "Checkbox",
-  "COMBO" : "Combo",
-  "INPUTS" : "Campos de entrada",
-  "DIALOGS" : "Diálogos",
-
-  "CONTAINERS" : "Contenedores",
-
-  "ALERT_DIALOG" : "Diálogo de alerta",
-  "INFO_DIALOG" : "Diálogo de información",
-  "WARNING_DIALOG" : "Diálogo de advertencia",
-  "ERROR_DIALOG" : "Diálogo de error",
-  "CONFIRM_DIALOG" : "Diálogo de confirmación",
-
-  "COLUMN" : "Columna",
-  "ROW" : "Fila",
-  "TITLE" : "Título",
-  "ELEVATION" : "Elevación"
-
+  "VIEW": "Vistas",
+  "FORMS": "Formularios",
+  "DATA": "Datos",
+  "VERSION": "Versión",
+  "FORM_ID": "ID",
+  "FORM_NAME": "Nombre",
+  "FORM_DESCRIPTION": "Descripción",
+  "VERSION_ID": "Versión",
+  "VERSION_NAME": "Nombre de versión",
+  "CREATION_DATE": "Fecha",
+  "LAST_MODIFICATION_DATE": "Última modificación",
+  "DATA_ID": "ID",
+  "FORM_VERSION_ID": "Versión del formulario"
 }

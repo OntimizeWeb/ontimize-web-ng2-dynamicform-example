@@ -13,7 +13,8 @@ import {
 
 import {
   OComponent,
-  OFormComponent
+  OFormComponent,
+  Mode
 } from 'ontimize-web-ng2/ontimize';
 
 import { ODynamicFormBuilderComponent } from 'ontimize-web-ng2-dynamicform-builder';
@@ -50,8 +51,22 @@ export class DynamicFormsEditFormComponent extends OFormComponent {
     super.ngAfterViewInit();
   }
 
+  setFormMode(mode: Mode) {
+    // use the event emmiter in form mode change for doing this
+    super.setFormMode(mode);
+    this.setDynamicFormBuilderMode();
+  }
+
+  setDynamicFormBuilderMode() {
+    if (this.dynamicFormBuilder) {
+      const editable = (this.mode === Mode.INSERT) || (this.mode === Mode.UPDATE);
+      this.dynamicFormBuilder.isReadOnly = !editable;
+    }
+  }
+
   setFormBuilder(builder: ODynamicFormBuilderComponent) {
     this.dynamicFormBuilder = builder;
+    this.setDynamicFormBuilderMode();
   }
 
   protected getAttributesValuesToUpdate(): Object {

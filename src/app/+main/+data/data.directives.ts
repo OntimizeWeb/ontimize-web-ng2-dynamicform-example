@@ -1,7 +1,11 @@
 import {
-  DataHomeComponent
+  DataHomeComponent,
+  DataDetailComponent,
+  DataDetailFormComponent
 } from '../+data';
 
 export const DATA_DIRECTIVES: any = [
-  DataHomeComponent
+  DataHomeComponent,
+  DataDetailFormComponent,
+  DataDetailComponent
 ];

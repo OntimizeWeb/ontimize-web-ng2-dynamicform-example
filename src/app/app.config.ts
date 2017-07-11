@@ -6,7 +6,7 @@ import { CustomOntimizeService } from './shared';
 export const CONFIG: Config = {
   // The base path of the URL used by app services.
   apiEndpoint: 'http://imatia211:8150/dynamic-web-form-wsrest',
-
+  // apiEndpoint: 'http://trial.imatia.com/demosontimize/dynamic-web-form-wsrest',
   uuid: 'com.ontimize.web.ng2.dynamicwebform',
 
   // Title of the app
@@ -14,7 +14,7 @@ export const CONFIG: Config = {
 
 
   //  Language of the application.
-  locale: 'es',
+  locale: 'en',
 
 
   // The service type used (Ontimize REST standart, Ontimize REST JEE or custom implementation)

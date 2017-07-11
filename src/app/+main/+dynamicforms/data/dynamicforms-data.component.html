@@ -4,7 +4,7 @@
   <div layout="row" layout-align="center" flex="80">
     <!--entity="EUsers" keys="USER_"-->
      <!---->
-    <dynamicforms-data-form #oForm layout="column"
+    <!--<dynamicforms-data-form #oForm layout="column"
       query-on-init="false"
       entity="EData"
       keys="DATA_ID;FORM_VERSION_ID"
@@ -17,14 +17,26 @@
       flex="75" class="md-whiteframe-4dp">
 
       <div layout="column">
-        <div style="text-align:center;">
-          <h1>DynamicForm with System JS.</h1>
-        </div>
         <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID"></o-dynamic-form>
       </div>
+    </dynamicforms-data-form>-->
+
+
+
+    <dynamicforms-data-form #oForm layout="column" query-on-init="false" entity="EData"
+      keys="DATA_ID;FORM_VERSION_ID" show-header="yes"
+      header-mode="none" label-header="OForm component" header-actions="R"
+      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA"
+      flex="75" class="md-whiteframe-4dp"
+      (onFormDataLoaded)="onFormDataLoaded($event)">
+
+      <div layout="column">
+        <o-dynamic-form #dynamicForm automatic-binding="no" query-on-init="true" attr="JSON"
+          entity="EDynamicFormsVersions" keys="VERSION_ID"
+          (render)="onDynamicFormDataLoaded($event)">
+        </o-dynamic-form>
+      </div>
     </dynamicforms-data-form>
-
-
 
   </div>
 </div>

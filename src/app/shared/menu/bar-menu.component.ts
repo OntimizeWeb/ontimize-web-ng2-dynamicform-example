@@ -11,7 +11,7 @@ import {DialogService} from 'ontimize-web-ng2/ontimize';
 })
 export class BarMenuComponent implements OnInit {
 
-  ontimizeWebVersion = '1.2.0';
+  ontimizeWebVersion = '1.2.3';
 
   public showVersionCallback: Function;
 

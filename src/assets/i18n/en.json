@@ -1,32 +1,15 @@
 {
-  "APP_TITLE" : "Playground",
-
-  "INTRODUCTION": "Introduction",
-  "INPUT" : "Input Fields",
-  "BUTTON" : "Buttons",
-  "DATA" : "Data",
-  "MEDIA" : "Media",
-  "LAYOUT" : "Layout",
-  "MENU" : "Menu",
-  "MODALS": "Modals",
-
-  "HOME" : "Home",
-  "BUTTONS" : "Buttons",
-  "CHECKBOX" : "Checkbox",
-  "COMBO" : "Combo",
-  "INPUTS" : "Input fields",
-  "DIALOGS" : "Dialogs",
-
-  "CONTAINERS" : "Containers",
-
-  "ALERT_DIALOG" : "Alert dialog",
-  "INFO_DIALOG" : "Information dialog",
-  "WARNING_DIALOG" : "Warning dialog",
-  "ERROR_DIALOG" : "Error dialog",
-  "CONFIRM_DIALOG" : "Confirm dialog",
-
-  "COLUMN" : "Column",
-  "ROW" : "Row",
-  "TITLE" : "Title",
-  "ELEVATION" : "Elevation"
+  "VIEW": "Views",
+  "FORMS": "Forms",
+  "DATA": "Data",
+  "VERSION": "Version",
+  "FORM_ID": "ID",
+  "FORM_NAME": "Name",
+  "FORM_DESCRIPTION": "Description",
+  "VERSION_ID": "Version",
+  "VERSION_NAME": "Version name",
+  "CREATION_DATE": "Date",
+  "LAST_MODIFICATION_DATE": "Last modification",
+  "DATA_ID": "ID",
+  "FORM_VERSION_ID": "Form version"
 }

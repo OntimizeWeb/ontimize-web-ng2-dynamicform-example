@@ -38,8 +38,18 @@ export class DynamicFormsDataComponent implements OnInit {
     this.navigationService.setTitle(title);
   }
 
-  ngAfterViewInit() {
-    this.form.setFormMode(Mode.UPDATE);
+  // ngAfterViewInit() {
+  //   this.form.setFormMode(Mode.UPDATE);
+  // }
+
+  onFormDataLoaded(data) {
+    // this.dynamicForm.queryData({
+    //   'VERSION_ID': data['FORM_VERSION_ID']
+    // });
+  }
+
+  onDynamicFormDataLoaded(data) {
+    // this.form.reloadStoredData();
   }
 
 }
