@@ -5,3 +5,6 @@ dynamicforms-new-form form.inner-form > div {
   bottom: 0px;
   left: 0px;
   right: 0px; }
+
+app-menu-frame {
+  top: 50px !important; }

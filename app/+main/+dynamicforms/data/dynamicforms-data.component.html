@@ -11,7 +11,7 @@
       parent-keys="FORM_VERSION_ID:VERSION_ID"
       show-header="yes"
       header-mode="none"
-      label-header="OForm component"
+      label-header=""
       header-actions=""
       columns="FORM_VERSION_ID;DATA_ID"
       flex="75" class="md-whiteframe-4dp">
@@ -25,7 +25,7 @@
 
     <dynamicforms-data-form #oForm layout="column" query-on-init="false" entity="EData"
       keys="DATA_ID;FORM_VERSION_ID" show-header="yes"
-      header-mode="none" label-header="OForm component" header-actions="R"
+      header-mode="none" label-header="" header-actions="R"
       columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA"
       flex="75" class="md-whiteframe-4dp"
       (onFormDataLoaded)="onFormDataLoaded($event)">

@@ -1,17 +1,18 @@
 <div layout="column" layout-align="center" layout-fill>
 
-  <dynamicforms-edit-form #oForm layout-fill
-    layout="column"
-    show-header="yes"
-    columns="VERSION_ID;JSON"
-    entity="EDynamicFormsVersions"
-    keys="VERSION_ID"
-    update-method="updateDynamicFormVersion">
+  <dynamicforms-edit-form #oForm layout-fill layout="column" show-header="yes" columns="VERSION_ID;JSON" entity="EDynamicFormsVersions"
+    keys="VERSION_ID" update-method="updateDynamicFormVersion">
 
-    <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" layout-fill >
 
-    </o-dynamic-form-builder>
+    <!-- <div layout="row" layout-align="space-around center" class="form-name">
+      <o-text-input attr="FORM_NAME"></o-text-input>
+      <o-text-input attr="FORM_DESCRIPTION" flex="60"></o-text-input>
+    </div> -->
+    <div layout="column" layout-align="center" layout-fill>
+      <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" layout-fill>
 
+      </o-dynamic-form-builder>
+    </div>
 
   </dynamicforms-edit-form>
 
