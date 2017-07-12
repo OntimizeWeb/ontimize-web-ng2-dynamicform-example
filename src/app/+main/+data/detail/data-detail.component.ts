@@ -5,17 +5,10 @@ import {
 } from '@angular/core';
 
 import {
-  OTranslateService
-} from 'ontimize-web-ng2/ontimize';
-
-import {
   ODynamicFormComponent
 } from 'ontimize-web-ng2-dynamicform';
 
-import { Router, ActivatedRoute } from '@angular/router';
-
 import { DataDetailFormComponent } from './data-detail.form.component';
-import { NavigationBarService } from '../../../shared';
 
 @Component({
   moduleId: module.id,
@@ -32,19 +25,10 @@ export class DataDetailComponent implements OnInit {
   dynamicForm: ODynamicFormComponent;
 
 
-
-  constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
-    protected router: Router,
-    protected actRoute: ActivatedRoute
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
   }
 
   onFormDataLoaded(data) {

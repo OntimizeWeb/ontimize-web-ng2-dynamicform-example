@@ -5,13 +5,8 @@ import {
 } from '@angular/core';
 
 import {
-  OTranslateService,
   OFormComponent
 } from 'ontimize-web-ng2/ontimize';
-
-import { Router } from '@angular/router';
-
-import { NavigationBarService } from '../../../shared';
 
 @Component({
   moduleId: module.id,
@@ -35,31 +30,11 @@ export class DynamicFormsDetailComponent implements OnInit {
     return this.formDefinitionStoredPrivate;
   }
 
-  constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
-    protected router: Router
-  ) {
+  constructor() {
   }
-
-  // onclick() {
-  //   this.formDefinitionStored = JSON.stringify({
-  //     'title': '',
-  //     'components': [
-  //       { 'attr': 'NAME', 'label': 'Nombre', 'ontimize-directive': 'o-text-input' },
-  //       { 'attr': 'AGE', 'label': 'Edad', 'ontimize-directive': 'o-integer-input' },
-  //       { 'attr': 'ID', 'label': 'DNI', 'ontimize-directive': 'o-nif-input' }
-  //     ]
-  //   });
-  // }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
+
   }
-
-
-
 
 }

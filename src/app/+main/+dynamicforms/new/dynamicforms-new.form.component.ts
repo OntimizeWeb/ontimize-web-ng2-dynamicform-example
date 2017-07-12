@@ -54,7 +54,6 @@ export class DynamicFormsNewFormComponent extends OFormComponent {
         attrValues['JSON'] = JSON.stringify(json);
       }
     }
-    attrValues['FORM_NAME'] = 'TEST';
     return attrValues;
   }
 

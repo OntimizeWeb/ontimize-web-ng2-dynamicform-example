@@ -6,6 +6,10 @@
     entity="EDynamicForms" keys="VERSION_ID"
     insert-method="insertDynamicForm">
 
+    <div layout="row" layout-align="space-around center" class="form-name">
+      <o-text-input attr="FORM_NAME"></o-text-input>
+      <o-text-input attr="FORM_DESCRIPTION" flex="60"></o-text-input>
+    </div>
     <div layout="column" layout-align="center" layout-fill>
       <o-dynamic-form-builder attr="JSON" #oDynamicFormBuilder>
       </o-dynamic-form-builder>

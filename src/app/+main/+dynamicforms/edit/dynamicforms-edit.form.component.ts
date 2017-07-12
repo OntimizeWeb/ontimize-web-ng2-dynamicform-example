@@ -33,7 +33,7 @@ import { ODynamicFormBuilderComponent } from 'ontimize-web-ng2-dynamicform-build
 })
 
 export class DynamicFormsEditFormComponent extends OFormComponent {
-
+  updating = false;
   dynamicFormBuilder: ODynamicFormBuilderComponent;
 
   constructor(
@@ -79,9 +79,14 @@ export class DynamicFormsEditFormComponent extends OFormComponent {
   }
 
   _closeDetailAction() {
+    if (!this.updating) {
+      super._closeDetailAction();
+    }
+    this.updating = false;
   }
 
   postCorrectUpdate(data) {
+    this.updating = true;
     console.log('[OFormComponent.postCorrectUpdate]', data);
     let route = [];
     route.push('dynamicforms');

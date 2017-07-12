@@ -4,14 +4,10 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { Router } from '@angular/router';
 
 import {
-  OTranslateService,
   OFormComponent
 } from 'ontimize-web-ng2/ontimize';
-
-import { NavigationBarService } from '../../../shared';
 
 import { ODynamicFormBuilderComponent } from 'ontimize-web-ng2-dynamicform-builder';
 import { DynamicFormsNewFormComponent } from './dynamicforms-new.form.component';
@@ -32,17 +28,10 @@ export class DynamicFormsNewComponent implements OnInit {
   @ViewChild('oDynamicFormBuilder')
   dynamicFormBuilder: ODynamicFormBuilderComponent;
 
-  constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
-    protected router: Router
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
   }
 
   ngAfterViewInit() {

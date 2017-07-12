@@ -1,13 +1,10 @@
 import {
   Component,
   OnInit,
-  ViewChild
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavigationBarService } from '../../../shared';
-
 import {
-  OTranslateService,
   OFormComponent,
   Mode
 } from 'ontimize-web-ng2/ontimize';
@@ -20,7 +17,8 @@ import { DynamicFormsEditFormComponent } from './dynamicforms-edit.form.componen
   moduleId: module.id,
   selector: 'dynamicforms-edit',
   templateUrl: 'dynamicforms-edit.component.html',
-  styleUrls: ['dynamicforms-edit.component.css']
+  styleUrls: ['dynamicforms-edit.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class DynamicFormsEditComponent implements OnInit {
 
@@ -32,17 +30,10 @@ export class DynamicFormsEditComponent implements OnInit {
 
   dynamicFormDefinition: Object = {};
 
-  constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
-    protected router: Router
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
   }
 
   ngAfterViewInit() {

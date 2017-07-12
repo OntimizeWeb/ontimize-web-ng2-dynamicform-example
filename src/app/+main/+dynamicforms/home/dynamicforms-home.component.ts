@@ -1,20 +1,16 @@
 import {
+  ViewChild,
   Component,
   OnInit
-  // ,
-  // ViewChild
 } from '@angular/core';
 
 import {
-  OTranslateService,
+  OTableComponent,
   OFormComponent
-  // ,
-  // OTableComponent
+
 } from 'ontimize-web-ng2/ontimize';
 
 import { Router, ActivatedRoute } from '@angular/router';
-
-import { NavigationBarService } from '../../../shared';
 
 @Component({
   moduleId: module.id,
@@ -23,23 +19,18 @@ import { NavigationBarService } from '../../../shared';
   styleUrls: ['dynamicforms-home.component.css']
 })
 export class DynamicFormsHomeComponent implements OnInit {
-
+  @ViewChild('table')
+  table: OTableComponent;
   constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
     protected router: Router,
     protected actRoute: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
-    // this.table.onTableDataLoaded.subscribe(data => {
-    //   this.table.selectRowsByData([{ VERSION_ID: 1 }], true);
-    // });
+
   }
+
 
   editDynamicFormData(item: any) {
     if (item.hasOwnProperty('VERSION_ID')) {

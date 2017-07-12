@@ -3,15 +3,6 @@ import {
   OnInit
 } from '@angular/core';
 
-import {
-  OTranslateService,
-  OFormComponent
-} from 'ontimize-web-ng2/ontimize';
-
-import { Router, ActivatedRoute } from '@angular/router';
-
-import { NavigationBarService } from '../../../shared';
-
 @Component({
   moduleId: module.id,
   selector: 'data-home',
@@ -20,18 +11,11 @@ import { NavigationBarService } from '../../../shared';
 })
 export class DataHomeComponent implements OnInit {
 
-  constructor(
-    protected navigationService: NavigationBarService,
-    protected translateService: OTranslateService,
-    protected router: Router,
-    protected actRoute: ActivatedRoute
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-    let title = '';
-    title = this.translateService.get('INTRODUCTION');
-    this.navigationService.setTitle(title);
+
   }
 
 }
