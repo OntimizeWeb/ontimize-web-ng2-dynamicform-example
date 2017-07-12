@@ -78,4 +78,23 @@ export class DynamicFormsEditFormComponent extends OFormComponent {
     return values;
   }
 
+  _closeDetailAction() {
+  }
+
+  postCorrectUpdate(data) {
+    console.log('[OFormComponent.postCorrectUpdate]', data);
+    let route = [];
+    route.push('dynamicforms');
+    route.push(data['VERSION_ID']);
+    this.router.navigate(
+      route,
+      {
+        queryParams: {
+          'isdetail': 'true'
+        }
+      }
+    );
+
+  }
+
 }

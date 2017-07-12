@@ -3,9 +3,12 @@
   <!--
   <div layout="row" layout-align="center" flex="80">-->
 <!--sort-columns="FORM_NAME;FORM_DESCRIPTION;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE"-->
+
+<!-- LAST_MODIFICATION_DATE -->
   <o-table #table title="DYNAMICFORMS" detail-button-in-row="yes" edit-button-in-row="yes"
-    columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE;JSON"
-    visible-columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;LAST_MODIFICATION_DATE"
+    columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
+    visible-columns="VERSION_ID;FORM_NAME;FORM_DESCRIPTION;CREATION_DATE"
+
 
     entity="EDynamicForms"
     keys="VERSION_ID" select-all-checkbox="no" row-height="small">
