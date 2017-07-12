@@ -1,5 +1,6 @@
 import {
   DynamicFormsDetailComponent,
+  DynamicFormDetailFormComponent,
   DynamicFormsEditComponent,
   DynamicFormsHomeComponent,
   DynamicFormsNewComponent,
@@ -11,6 +12,7 @@ import {
 
 export const DYNAMICFORMS_DIRECTIVES: any = [
   DynamicFormsDetailComponent,
+  DynamicFormDetailFormComponent,
   DynamicFormsEditComponent,
   DynamicFormsHomeComponent,
   DynamicFormsNewComponent,

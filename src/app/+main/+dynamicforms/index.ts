@@ -1,4 +1,5 @@
 export { DynamicFormsDetailComponent } from './detail/dynamicforms-detail.component';
+export { DynamicFormDetailFormComponent } from './detail/dynamicforms-detail.form.component';
 
 export { DynamicFormsEditComponent } from './edit/dynamicforms-edit.component';
 export { DynamicFormsEditFormComponent } from './edit/dynamicforms-edit.form.component';
