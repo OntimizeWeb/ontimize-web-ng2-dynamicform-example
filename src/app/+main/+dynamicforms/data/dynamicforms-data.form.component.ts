@@ -35,7 +35,7 @@ import { ODynamicFormBuilderComponent } from 'ontimize-web-ng2-dynamicform-build
 export class DynamicFormsDataFormComponent extends OFormComponent {
 
   dynamicFormBuilder: ODynamicFormBuilderComponent;
-
+  inserting = false;
   constructor(
     router: Router,
     actRoute: ActivatedRoute,
@@ -72,11 +72,16 @@ export class DynamicFormsDataFormComponent extends OFormComponent {
   determinateFormMode() {
     this.setFormMode(Mode.INSERT);
   }
-  _closeDetailAction() {
 
+  _closeDetailAction() {
+    if (!this.inserting) {
+      super._closeDetailAction();
+    }
+    this.inserting = false;
   }
 
   postCorrectInsert(result: any) {
+    this.inserting = true;
     console.log('[OFormComponent.postCorrectInsert]', result);
     this.router.navigate(['/main/data', result['DATA_ID']]);
     let route = [];
