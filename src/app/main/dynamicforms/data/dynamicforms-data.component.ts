@@ -7,8 +7,7 @@ import {
 
 import {
   OTranslateService,
-  OFormComponent,
-  Mode
+  OFormComponent
 } from 'ontimize-web-ng2';
 
 @Component({
