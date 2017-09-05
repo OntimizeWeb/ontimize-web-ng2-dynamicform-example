@@ -1,12 +1,13 @@
-import { Config } from 'ontimize-web-ng2/ontimize';
+import { Config } from 'ontimize-web-ng2';
 // import { SERVICE_CONFIG } from './shared/app.services.config';
 
-import { CustomOntimizeService } from './shared';
+import { CustomOntimizeService } from './shared/custom-ontimize.service';
 
 export const CONFIG: Config = {
   // The base path of the URL used by app services.
   // apiEndpoint: 'http://imatia211:8150/dynamic-web-form-wsrest',
-  apiEndpoint: 'https://trial.imatia.com/demosontimize/dynamic-web-form-wsrest',
+  // apiEndpoint: 'https://trial.imatia.com/demosontimize/dynamic-web-form-wsrest',
+  apiEndpoint: 'http://IMATIA14079:9080/dynamic-web-form-wsrest',
   uuid: 'com.ontimize.web.ng2.dynamicwebform',
 
   // Title of the app

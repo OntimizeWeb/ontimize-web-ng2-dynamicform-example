@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+
+  <!-- LAST_MODIFICATION_DATE -->
+  <o-table #table title="DYNAMICFORMS" detail-button-in-row="yes" edit-button-in-row="yes" columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
+    visible-columns="VERSION_ID;FORM_NAME;FORM_DESCRIPTION;CREATION_DATE" pageable="no" pagination-controls="no" entity="EDynamicForms"
+    keys="VERSION_ID" select-all-checkbox="no" row-height="small" delete-button="no">
+
+    <o-table-column attr="VERSION_ID" title="VERSION_ID" orderable="no"></o-table-column>
+
+    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
+
+    <o-table-column>
+      <o-table-cell-renderer-action (onClick)="addDynamicFormData($event)" render-type="icon" render-value="storage" action-title="DATA">
+      </o-table-cell-renderer-action>
+    </o-table-column>
+  </o-table>
+
+</div>

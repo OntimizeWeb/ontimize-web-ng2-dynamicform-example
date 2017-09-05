@@ -1,23 +1,22 @@
 import { NgModule, Injector } from '@angular/core';
+import { MaterialModule } from '@angular/material';
 
 import {
-  MaterialModule,
-  MdIconRegistry
-} from '@angular/material';
+  APP_CONFIG,
+  ONTIMIZE_PROVIDERS,
+  ONTIMIZE_MODULES
+} from 'ontimize-web-ng2';
 
-import {
-  ONTIMIZE_MODULES,
-  ontimizeProviders,
-  ODialogComponent
-} from 'ontimize-web-ng2/ontimize';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { CONFIG } from './app.config';
 import { AppComponent } from './app.component';
-import { routing } from './app.routes';
-import { APP_DIRECTIVES } from './app.directives';
-import { NavigationBarService, CustomOntimizeService } from './shared';
+import { AppRoutingModule } from './app-routing.module';
+import { MainModule } from './main/main.module';
+import { LoginModule } from './login/login.module';
+import { NavigationBarService } from './shared/navigation-bar.service';
+import { CustomOntimizeService } from './shared/custom-ontimize.service';
 
-// import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 import { DynamicFormModule } from 'ontimize-web-ng2-dynamicform';
 
 import {
@@ -25,18 +24,16 @@ import {
   ComponentSettingsDialogComponent
 } from 'ontimize-web-ng2-dynamicform-builder';
 
-
-// Standard providers...
-let standardProviders = ontimizeProviders({
-  'config': CONFIG
-});
+export function getCustomOntimizeServiceProvider(injector) {
+  return new CustomOntimizeService(injector);
+}
 
 // Defining custom providers (if needed)...
 let customProviders = [
   NavigationBarService,
   {
     provide: CustomOntimizeService,
-    useFactory: (injector) => new CustomOntimizeService(injector),
+    useFactory: getCustomOntimizeServiceProvider,
     deps: [Injector]
   }
 ];
@@ -44,30 +41,27 @@ let customProviders = [
 @NgModule({
   imports: [
     ONTIMIZE_MODULES,
-    routing,
-    // HighlightJsModule,
-    MaterialModule.forRoot(),
-    DynamicFormModule.forRoot(),
-    DynamicFormBuilderModule
+    MaterialModule,
+    DynamicFormModule,
+    DynamicFormBuilderModule,
+    TranslateModule,
+    LoginModule,
+    MainModule,
+    AppRoutingModule
   ],
   declarations: [
-    AppComponent,
-    ...APP_DIRECTIVES
+    AppComponent
   ],
   entryComponents: [
-    ODialogComponent,
     ComponentSettingsDialogComponent
   ],
   bootstrap: [
     AppComponent
   ],
   providers: [
-    ...standardProviders,
-    ...customProviders,
-    MdIconRegistry
-    // ,
-    // HighlightJsService
+    { provide: APP_CONFIG, useValue: CONFIG },
+    ...ONTIMIZE_PROVIDERS,
+    ...customProviders
   ]
 })
 export class AppModule { }
-

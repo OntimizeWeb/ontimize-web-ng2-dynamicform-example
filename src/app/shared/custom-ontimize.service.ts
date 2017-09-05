@@ -9,7 +9,7 @@ import {
   // ,
   // LoginService,
   // SERVICE_CONFIG
-} from 'ontimize-web-ng2/ontimize';
+} from 'ontimize-web-ng2';
 
 export class CustomOntimizeService extends OntimizeService {
 
@@ -204,6 +204,5 @@ export class CustomOntimizeService extends OntimizeService {
   // public delete(kv: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
   //   return undefined;
   // }
-
 
 }
