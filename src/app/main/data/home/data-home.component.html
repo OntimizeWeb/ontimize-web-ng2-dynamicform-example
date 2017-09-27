@@ -1,14 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
 
-  <o-table #table title="DATA"
+  <o-datatable #table title="DATA"
     columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;FORM_NAME;FORM_DESCRIPTION"
     visible-columns="CREATION_DATE;LAST_MODIFICATION_DATE;FORM_NAME;FORM_DESCRIPTION;FORM_VERSION_ID"
     entity="EData" keys="DATA_ID" select-all-checkbox="yes" row-height="small" detail-button-in-row="yes"
     edit-button-in-row="yes" pageable="no" pagination-controls="no"
     insert-button="no">
 
-    <!-- <o-table-column attr="DATA_ID" title="DATA_ID" orderable="no"></o-table-column> -->
-    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
-    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
-  </o-table>
+    <!-- <o-datatable-column attr="DATA_ID" title="DATA_ID" orderable="no"></o-datatable-column> -->
+    <o-datatable-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-datatable-column>
+    <o-datatable-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-datatable-column>
+  </o-datatable>
 </div>
