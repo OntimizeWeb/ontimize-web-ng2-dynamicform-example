@@ -5,6 +5,7 @@ import { AuthGuardService } from 'ontimize-web-ngx';
 import { MainComponent } from './main.component';
 import { DataModule } from './data/data.module';
 import { DynamicformsModule } from './dynamicforms/dynamicforms.module';
+import { VersionModule } from './version/version.module';
 
 export function loadDataModule() {
   return DataModule;
@@ -12,6 +13,10 @@ export function loadDataModule() {
 
 export function loadDynamicFormsModule() {
   return DynamicformsModule;
+}
+
+export function loadVersionModule() {
+  return VersionModule;
 }
 
 export const routes: Routes = [
@@ -22,7 +27,8 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dynamicforms', pathMatch: 'full' },
       { path: 'data', loadChildren: loadDataModule },
-      { path: 'dynamicforms', loadChildren: loadDynamicFormsModule }
+      { path: 'dynamicforms', loadChildren: loadDynamicFormsModule },
+      { path: 'version', loadChildren: loadVersionModule }
     ]
   }
 ];

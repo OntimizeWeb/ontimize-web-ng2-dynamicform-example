@@ -1,5 +1,6 @@
 import { Config } from 'ontimize-web-ngx';
 // import { SERVICE_CONFIG } from './shared/app.services.config';
+import { MENU_CONFIG } from './shared/app.menu.config';
 
 import { CustomOntimizeService } from './shared/custom-ontimize.service';
 
@@ -24,4 +25,8 @@ export const CONFIG: Config = {
 
   // Configuration parameters of application services.
   // servicesConfiguration: SERVICE_CONFIG
+
+  appMenuConfiguration: MENU_CONFIG,
+
+  applicationLocales: ['es', 'en']
 };
