@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { ObservableWrapper } from 'ontimize-web-ng2/ontimize/util/async';
+import { ObservableWrapper } from 'ontimize-web-ngx/ontimize/util/async';
 
 @Injectable()
 export class NavigationBarService {

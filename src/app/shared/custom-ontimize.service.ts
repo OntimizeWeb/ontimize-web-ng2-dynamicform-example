@@ -9,7 +9,7 @@ import {
   // ,
   // LoginService,
   // SERVICE_CONFIG
-} from 'ontimize-web-ng2';
+} from 'ontimize-web-ngx';
 
 export class CustomOntimizeService extends OntimizeService {
 

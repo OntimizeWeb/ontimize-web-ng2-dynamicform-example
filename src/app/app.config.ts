@@ -1,4 +1,4 @@
-import { Config } from 'ontimize-web-ng2';
+import { Config } from 'ontimize-web-ngx';
 // import { SERVICE_CONFIG } from './shared/app.services.config';
 
 import { CustomOntimizeService } from './shared/custom-ontimize.service';
@@ -8,7 +8,7 @@ export const CONFIG: Config = {
   // apiEndpoint: 'http://imatia211:8150/dynamic-web-form-wsrest',
   // apiEndpoint: 'https://trial.imatia.com/demosontimize/dynamic-web-form-wsrest',
   apiEndpoint: 'http://IMATIA14079:9080/dynamic-web-form-wsrest',
-  uuid: 'com.ontimize.web.ng2.dynamicwebform',
+  uuid: 'com.ontimize.web.ngx.dynamicwebform',
 
   // Title of the app
   title: 'Dynamic web form',

@@ -7,7 +7,7 @@ import {
 
 import {
   ODynamicFormComponent
-} from 'ontimize-web-ng2-dynamicform';
+} from 'ontimize-web-ngx-dynamicform';
 
 import { DataDetailFormComponent } from './data-detail.form.component';
 

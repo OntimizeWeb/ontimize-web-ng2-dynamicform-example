@@ -8,7 +8,7 @@ import {
 import {
   OTranslateService,
   OFormComponent
-} from 'ontimize-web-ng2';
+} from 'ontimize-web-ngx';
 
 @Component({
   selector: 'dynamicforms-data',

@@ -7,9 +7,9 @@ import {
 
 import {
   OFormComponent
-} from 'ontimize-web-ng2';
+} from 'ontimize-web-ngx';
 
-import { ODynamicFormBuilderComponent } from 'ontimize-web-ng2-dynamicform-builder';
+import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 import { DynamicFormsNewFormComponent } from './dynamicforms-new.form.component';
 
 @Component({

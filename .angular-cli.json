@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ontimize-web-ng2-dynamicform-example"
+    "name": "ontimize-web-ngx-dynamicform-example"
   },
   "apps": [
     {
@@ -20,15 +20,16 @@
       "prefix": "app",
       "styles": [
         "../node_modules/ng2-dnd/bundles/style.css",
-        "../node_modules/ontimize-web-ng2/ontimize.scss",
-        "../node_modules/ontimize-web-ng2-dynamicform-builder/src/assets/css/app.scss",
+        "../node_modules/ontimize-web-ngx/ontimize.scss",
+        "../node_modules/ontimize-web-ngx-datatable/styles.scss",
+        "../node_modules/ontimize-web-ngx-dynamicform/styles.scss",
+        "../node_modules/ontimize-web-ngx-dynamicform-builder/src/assets/css/app.scss",
         "assets/css/loader.scss",
         "assets/css/app.scss",
         "styles.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/jquery-ui/ui/widgets/datepicker.js",
         "../node_modules/colresizable/colResizable-1.6.min.js",
         "../node_modules/pdfmake/build/pdfmake.js",
         "../node_modules/pdfmake/build/vfs_fonts.js",

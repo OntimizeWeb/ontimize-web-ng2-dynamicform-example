@@ -4,10 +4,8 @@ import {
   OnInit
 } from '@angular/core';
 
-import {
-  OTableComponent,
-  OFormComponent
-} from 'ontimize-web-ng2';
+import { OFormComponent } from 'ontimize-web-ngx';
+import { ODataTableComponent } from 'ontimize-web-ngx-datatable';
 
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -19,7 +17,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class DynamicFormsHomeComponent implements OnInit {
 
   @ViewChild('table')
-  table: OTableComponent;
+  table: ODataTableComponent;
 
   constructor(
     protected router: Router,

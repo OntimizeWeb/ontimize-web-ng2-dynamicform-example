@@ -7,11 +7,11 @@ import {
 
 import {
   OFormComponent
-} from 'ontimize-web-ng2';
+} from 'ontimize-web-ngx';
 
 import {
   ODynamicFormComponent
-} from 'ontimize-web-ng2-dynamicform';
+} from 'ontimize-web-ngx-dynamicform';
 
 @Component({
   selector: 'dynamicforms-detail',

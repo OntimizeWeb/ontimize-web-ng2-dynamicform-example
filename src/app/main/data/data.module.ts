@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { OntimizeWebModule } from 'ontimize-web-ng2';
+import { ODataTableModule } from 'ontimize-web-ngx-datatable';
+import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { DataRoutingModule, DATA_MODULE_DECLARATIONS } from './data-routing.module';
-import { DynamicFormModule } from 'ontimize-web-ng2-dynamicform';
+import { DynamicFormModule } from 'ontimize-web-ngx-dynamicform';
 import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     SharedModule,
+    ODataTableModule,
     OntimizeWebModule,
     DynamicFormModule,
     DataRoutingModule

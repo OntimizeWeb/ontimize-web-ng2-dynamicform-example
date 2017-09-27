@@ -10,13 +10,13 @@
 
       <p class="session-expired" *ngIf="sessionExpired">{{ 'ERROR_SESSION_EXPIRED' | translate }}</p>
 
-      <md-input-container fxFlexFill>
+      <md-form-field fxFlexFill>
         <input mdInput #user placeholder="{{ 'USERNAME' | translate }}" id="username" formControlName="username">
-      </md-input-container>
+      </md-form-field>
 
-      <md-input-container fxFlexFill>
+      <md-form-field fxFlexFill>
         <input mdInput #password placeholder="{{ 'PASSWORD' | translate }}" id="password" type="password" formControlName="password">
-      </md-input-container>
+      </md-form-field>
 
       <button md-raised-button color="primary" type="submit">{{ 'LOGIN' | translate }}</button>
       <div layout-padding></div>

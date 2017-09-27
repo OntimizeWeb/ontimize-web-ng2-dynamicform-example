@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { AuthGuardService } from 'ontimize-web-ng2';
+import { AuthGuardService } from 'ontimize-web-ngx';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [

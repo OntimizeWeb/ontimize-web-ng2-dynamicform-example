@@ -5,7 +5,7 @@ import {
   APP_CONFIG,
   ONTIMIZE_PROVIDERS,
   ONTIMIZE_MODULES
-} from 'ontimize-web-ng2';
+} from 'ontimize-web-ngx';
 
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -17,12 +17,13 @@ import { LoginModule } from './login/login.module';
 import { NavigationBarService } from './shared/navigation-bar.service';
 import { CustomOntimizeService } from './shared/custom-ontimize.service';
 
-import { DynamicFormModule } from 'ontimize-web-ng2-dynamicform';
+import { ODataTableModule } from 'ontimize-web-ngx-datatable';
+import { DynamicFormModule } from 'ontimize-web-ngx-dynamicform';
 
 import {
   DynamicFormBuilderModule,
   ComponentSettingsDialogComponent
-} from 'ontimize-web-ng2-dynamicform-builder';
+} from 'ontimize-web-ngx-dynamicform-builder';
 
 export function getCustomOntimizeServiceProvider(injector) {
   return new CustomOntimizeService(injector);
@@ -42,6 +43,7 @@ let customProviders = [
   imports: [
     ONTIMIZE_MODULES,
     MaterialModule,
+    ODataTableModule,
     DynamicFormModule,
     DynamicFormBuilderModule,
     TranslateModule,
