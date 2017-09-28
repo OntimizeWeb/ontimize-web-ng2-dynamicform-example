@@ -11,8 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'dynamicforms-home',
-  template: require('./dynamicforms-home.component.html'),
-  styles: [require('./dynamicforms-home.component.scss')]
+  templateUrl: './dynamicforms-home.component.html',
+  styleUrls: ['./dynamicforms-home.component.scss']
 })
 export class DynamicFormsHomeComponent implements OnInit {
 

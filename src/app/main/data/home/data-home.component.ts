@@ -5,8 +5,8 @@ import {
 
 @Component({
   selector: 'data-home',
-  template: require('./data-home.component.html'),
-  styles: [require('./data-home.component.scss')]
+  templateUrl: './data-home.component.html',
+  styleUrls: ['./data-home.component.scss']
 })
 export class DataHomeComponent implements OnInit {
 

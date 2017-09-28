@@ -14,8 +14,8 @@ import { DynamicFormsNewFormComponent } from './dynamicforms-new.form.component'
 
 @Component({
   selector: 'dynamicforms-new',
-  template: require('./dynamicforms-new.component.html'),
-  styles: [require('./dynamicforms-new.component.scss')],
+  templateUrl: './dynamicforms-new.component.html',
+  styleUrls: ['./dynamicforms-new.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class DynamicFormsNewComponent implements OnInit {

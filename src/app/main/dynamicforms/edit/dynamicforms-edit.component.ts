@@ -13,8 +13,8 @@ import { DynamicFormsEditFormComponent } from './dynamicforms-edit.form.componen
 
 @Component({
   selector: 'dynamicforms-edit',
-  template: require('./dynamicforms-edit.component.html'),
-  styles: [require('./dynamicforms-edit.component.scss')],
+  templateUrl: './dynamicforms-edit.component.html',
+  styleUrls: ['./dynamicforms-edit.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class DynamicFormsEditComponent implements OnInit {

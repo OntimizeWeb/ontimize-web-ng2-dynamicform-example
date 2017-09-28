@@ -12,8 +12,8 @@ import {
 
 @Component({
   selector: 'dynamicforms-data',
-  template: require('./dynamicforms-data.component.html'),
-  styles: [require('./dynamicforms-data.component.scss')],
+  templateUrl: './dynamicforms-data.component.html',
+  styleUrls: ['./dynamicforms-data.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class DynamicFormsDataComponent implements OnInit {

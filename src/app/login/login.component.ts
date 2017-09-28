@@ -8,8 +8,8 @@ import { APP_CONFIG, Config } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'login',
-  styles: [require('./login.component.scss')],
-  template: require('./login.component.html')
+  styleUrls: ['./login.component.scss'],
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
 

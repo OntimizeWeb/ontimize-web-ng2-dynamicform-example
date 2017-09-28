@@ -13,8 +13,8 @@ import { DataDetailFormComponent } from './data-detail.form.component';
 
 @Component({
   selector: 'data-detail',
-  template: require('./data-detail.component.html'),
-  styles: [require('./data-detail.component.scss')],
+  templateUrl: './data-detail.component.html',
+  styleUrls: ['./data-detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class DataDetailComponent implements OnInit {
