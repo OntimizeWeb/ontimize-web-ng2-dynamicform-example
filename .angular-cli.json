@@ -23,10 +23,9 @@
         "../node_modules/ontimize-web-ngx/ontimize.scss",
         "../node_modules/ontimize-web-ngx-datatable/styles.scss",
         "../node_modules/ontimize-web-ngx-dynamicform/styles.scss",
-        "../node_modules/ontimize-web-ngx-dynamicform-builder/src/assets/css/app.scss",
-        "assets/css/loader.scss",
+        "../node_modules/ontimize-web-ngx-dynamicform-builder/styles.scss",
         "assets/css/app.scss",
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
