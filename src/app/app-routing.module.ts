@@ -3,16 +3,12 @@ import { AuthGuardService } from 'ontimize-web-ngx';
 import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'main',
-    pathMatch: 'prefix',
-    canActivate: [AuthGuardService]
-  }
+  { path: '', redirectTo: 'main', pathMatch: 'prefix' }
 ];
 
 let opt = {
-  enableTracing: false // true if you want to print navigation routes
+  enableTracing: false
+  // true if you want to print navigation routes
 };
 
 @NgModule({

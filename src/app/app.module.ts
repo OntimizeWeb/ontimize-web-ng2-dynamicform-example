@@ -11,8 +11,6 @@ import { MainModule } from './main/main.module';
 import { LoginModule } from './login/login.module';
 import { CustomOntimizeService } from './shared/custom-ontimize.service';
 
-import { ComponentSettingsDialogComponent } from 'ontimize-web-ngx-dynamicform-builder';
-
 export function getCustomOntimizeServiceProvider(injector) {
   return new CustomOntimizeService(injector);
 }
@@ -35,9 +33,6 @@ let customProviders = [
   ],
   declarations: [
     AppComponent
-  ],
-  entryComponents: [
-    ComponentSettingsDialogComponent
   ],
   bootstrap: [
     AppComponent

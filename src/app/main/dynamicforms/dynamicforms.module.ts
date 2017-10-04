@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { ODataTableModule } from 'ontimize-web-ngx-datatable';
 import { DynamicFormModule } from 'ontimize-web-ngx-dynamicform';
@@ -15,6 +15,7 @@ import { SharedModule } from '../../shared/shared.module';
     DynamicFormBuilderModule,
     DynamicformsRoutingModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: DYNAMICFORMS_MODULE_DECLARATIONS,
   exports: DYNAMICFORMS_MODULE_DECLARATIONS
 })
