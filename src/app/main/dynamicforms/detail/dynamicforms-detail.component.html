@@ -1,0 +1,21 @@
+<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+
+  <div fxLayout="row" fxLayoutAlign="center" fxFlex="80">
+
+    <dynamicform-detail-form #oForm fxLayout="column" entity="EDynamicFormsVersions"
+      keys="VERSION_ID" show-header="yes" header-mode="none"
+      label-header=""
+      header-actions="R" fxFlex="75" class="mat-elevation-z4"
+      (onFormDataLoaded)="onFormDataLoaded($event)">
+
+
+      <div fxLayout="column">
+        <o-dynamic-form query-on-init="false" #oDynamicForm attr="JSON" automatic-binding="no"
+          (render)="onDynamicFormDataLoaded($event)">
+        </o-dynamic-form>
+      </div>
+
+    </dynamicform-detail-form>
+
+  </div>
+</div>

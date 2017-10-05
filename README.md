@@ -2,5 +2,5 @@
 
 ## Live demo
 
-Run live demo <a href="https://ontimizeweb.github.io/ontimize-web-ng2-dynamicform-example/" target="_blank" title="live demo">
+Run live demo <a href="https://ontimizeweb.github.io/ontimize-web-ngx-dynamicform-example/" target="_blank" title="live demo">
 here</a>.

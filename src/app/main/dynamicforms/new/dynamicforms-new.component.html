@@ -1,0 +1,12 @@
+<div fxLayoutAlign="center" fxFlexFill>
+  <dynamicforms-new-form #oForm fxFlexFill show-header="yes" columns="VERSION_ID;JSON" entity="EDynamicForms" keys="VERSION_ID"
+    insert-method="insertDynamicForm">
+    <div fxLayout="column" fxFlexFill>
+      <div fxLayout="row" fxLayoutAlign="space-around center" class="form-name">
+        <o-text-input attr="FORM_NAME"></o-text-input>
+        <o-text-input attr="FORM_DESCRIPTION" fxFlex="60"></o-text-input>
+      </div>
+      <o-dynamic-form-builder attr="JSON" #oDynamicFormBuilder fxFlex></o-dynamic-form-builder>
+    </div>
+  </dynamicforms-new-form>
+</div>
