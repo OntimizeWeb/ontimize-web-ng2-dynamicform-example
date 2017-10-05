@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-dynamicform-example",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -9,6 +9,7 @@
     "aot:bundle": "webpack --config config/webpack-aot.config.js --bail",
     "aot:compile": "node_modules/.bin/ngc -p tsconfig.aot.json",
     "start": "ng serve",
+    "start-aot": "npm run clean:all && npm run aot:compile && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -16,7 +17,7 @@
     "clean": "rimraf dist",
     "clean:aot": " rimraf src/node_modules && rimraf src/app/**/*.ngfactory.ts && rimraf src/app/**/*.ngsummary.json && rimraf src/app/**/*.ngstyle.ts && rimraf src/app/**/*.d.ts",
     "clean:all": "npm run clean && npm run clean:aot",
-    "production": "npm run clean && ng build --aot=false --target -prod",
+    "production": "npm run clean && ng build --aot=false --prod --base-href ./",
     "styles": "node-sass src/styles-aot.scss dist/assets/css/app.css --output-style compressed"
   },
   "private": true,
@@ -66,7 +67,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
-    "tslint": "5.2.0",
-    "webpack": "2.3.1"
+    "tslint": "5.2.0"
   }
 }

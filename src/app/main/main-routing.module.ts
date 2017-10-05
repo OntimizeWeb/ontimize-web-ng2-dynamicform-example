@@ -39,9 +39,9 @@ export const routes: Routes = [
 //     canActivate: [AuthGuardService],
 //     children: [
 //       { path: '', redirectTo: 'dynamicforms', pathMatch: 'full' },
-//       { path: 'data', loadChildren: './data/data.module#DataModule' },
-//       { path: 'dynamicforms', loadChildren: './dynamicforms/dynamicforms.module#DynamicformsModule' },
-//       { path: 'version', loadChildren: './version/version.module#VersionModule' }
+//     //   { path: 'data', loadChildren: './data/data.module#DataModule' },
+//       { path: 'dynamicforms', loadChildren: './dynamicforms/dynamicforms.module#DynamicformsModule' }
+//     //   { path: 'version', loadChildren: './version/version.module#VersionModule' }
 //     ]
 //   }
 // ];
