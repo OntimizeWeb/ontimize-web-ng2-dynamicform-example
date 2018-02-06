@@ -1,0 +1,12 @@
+dynamicforms-edit-form {
+  ng-host {
+    height: 100%;
+  }
+  form {
+    overflow: auto;
+    height: calc(100% - 50px);
+    .o-form-content-wrapper{
+      height: 100%;
+    }
+  }
+}
