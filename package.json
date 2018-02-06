@@ -18,7 +18,10 @@
     "clean:aot": " rimraf src/node_modules && rimraf src/app/**/*.ngfactory.ts && rimraf src/app/**/*.ngsummary.json && rimraf src/app/**/*.ngstyle.ts && rimraf src/app/**/*.d.ts",
     "clean:all": "npm run clean && npm run clean:aot",
     "production": "npm run clean && ng build --aot=false --prod --base-href ./",
-    "styles": "node-sass src/styles-aot.scss dist/assets/css/app.css --output-style compressed"
+    "production-server": "npm run clean && ng build --aot=false --prod --base-href /ontimizeweb/dynamicform/",
+    "styles": "node-sass src/styles-aot.scss dist/assets/css/app.css --output-style compressed",
+    "xxx": "npm install && npm start",
+    "rdb": "rimraf node_modules/ontimize-web-ngx-dynamicform-builder"
   },
   "private": true,
   "dependencies": {
@@ -39,11 +42,11 @@
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "1.0.2",
     "core-js": "^2.4.1",
-    "ontimize-web-ngx": "2.0.0",
-    "ontimize-web-ngx-datatable": "1.0.3",
-    "ontimize-web-ngx-dynamicform": "2.0.1",
-    "ontimize-web-ngx-dynamicform-builder": "2.0.1",
-    "ontimize-web-ngx-theming": "1.0.0",
+    "ontimize-web-ngx": "file:C:\\workspace\\github\\ontimize-web-ng2-VERSIONS\\2.1.0-rc.4\\ontimize-web-ngx\\dist\\ontimize-web-ngx-2.1.0-rc.4.tgz",
+    "ontimize-web-ngx-datatable": "1.0.6",
+    "ontimize-web-ngx-dynamicform": "file:C:\\workspace\\github\\DYNAMICFORM\\ontimize-web-ng2-dynamicform\\dist\\ontimize-web-ngx-dynamicform-2.0.2.tgz",
+    "ontimize-web-ngx-dynamicform-builder": "file:C:\\workspace\\github\\DYNAMICFORM\\ontimize-web-ng2-dynamicform-builder\\dist\\ontimize-web-ngx-dynamicform-builder-2.0.2.tgz",
+    "ontimize-web-ngx-theming": "file:C:\\workspace\\github\\THEMING\\ontimize-web-ng2-theming\\dist\\ontimize-web-ngx-theming-1.0.5.tgz",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.12"
