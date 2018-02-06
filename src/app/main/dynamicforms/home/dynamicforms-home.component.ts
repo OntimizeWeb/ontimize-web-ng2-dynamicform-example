@@ -1,23 +1,24 @@
 import {
   ViewChild,
   Component,
-  OnInit
+  OnInit,
+  ViewEncapsulation
 } from '@angular/core';
 
-import { OFormComponent } from 'ontimize-web-ngx';
-import { ODataTableComponent } from 'ontimize-web-ngx-datatable';
+import { OFormComponent, OTableComponent } from 'ontimize-web-ngx';
 
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'dynamicforms-home',
   templateUrl: './dynamicforms-home.component.html',
-  styleUrls: ['./dynamicforms-home.component.scss']
+  styleUrls: ['./dynamicforms-home.component.scss'],
+  encapsulation : ViewEncapsulation.None
 })
 export class DynamicFormsHomeComponent implements OnInit {
 
   @ViewChild('table')
-  table: ODataTableComponent;
+  table: OTableComponent;
 
   constructor(
     protected router: Router,
@@ -43,7 +44,7 @@ export class DynamicFormsHomeComponent implements OnInit {
   }
 
   addDynamicFormData(item: any) {
-    if (item.hasOwnProperty('VERSION_ID')) {
+    if (item && item.hasOwnProperty('VERSION_ID')) {
       let route = [item['VERSION_ID']];
       route.push('data');
       this.router.navigate(

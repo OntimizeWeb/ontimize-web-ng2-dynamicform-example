@@ -1,19 +1,18 @@
 <div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
 
   <!-- LAST_MODIFICATION_DATE -->
-  <o-datatable #table title="DYNAMICFORMS" detail-button-in-row="yes" edit-button-in-row="yes" columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
-    visible-columns="VERSION_ID;FORM_NAME;FORM_DESCRIPTION;CREATION_DATE" pageable="no" pagination-controls="no" entity="EDynamicForms"
-    keys="VERSION_ID" select-all-checkbox="no" row-height="small" delete-button="no">
+  <o-table #table fxFlexFill title="DYNAMICFORMS" columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
+    visible-columns="FORM_NAME;FORM_DESCRIPTION;CREATION_DATE;VERSION_ID" sort-columns="CREATION_DATE:desc" pageable="no" pagination-controls="no"
+    entity="EDynamicForms" keys="VERSION_ID" row-height="small" delete-button="no">
 
-    <o-datatable-column attr="VERSION_ID" title="VERSION_ID" orderable="no"></o-datatable-column>
+    <!-- detail-button-in-row="yes" edit-button-in-row="yes" -->
+    <!-- <o-table-column attr="VERSION_ID" title="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered"></o-table-column> -->
+    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
+    <o-table-column attr="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered">
+      <action-cell-renderer (onClick)="addDynamicFormData($event)" icon="storage"></action-cell-renderer>
+    </o-table-column>
 
-    <o-datatable-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-datatable-column>
-    <o-datatable-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-datatable-column>
-
-    <o-datatable-column>
-      <o-datatable-cell-renderer-action (onClick)="addDynamicFormData($event)" render-type="icon" render-value="storage" action-title="DATA">
-      </o-datatable-cell-renderer-action>
-    </o-datatable-column>
-  </o-datatable>
+  </o-table>
 
 </div>

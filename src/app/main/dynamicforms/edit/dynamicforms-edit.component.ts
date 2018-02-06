@@ -37,4 +37,8 @@ export class DynamicFormsEditComponent implements OnInit {
     }
   }
 
+  onRender(arg) {
+    console.log(arg);
+  }
+
 }

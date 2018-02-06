@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
+  // apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/dynamic-web-form-wsrest',
+  // apiEndpoint: 'http://imatia211:8150/dynamic-web-form-wsrest',
+  apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/dynamic-web-form-wsrest',
   production: false
 };

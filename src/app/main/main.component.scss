@@ -1,0 +1,13 @@
+.o-table-column-centered {
+  text-align: center;
+}
+
+o-form-toolbar {
+  padding: 0;
+
+  .mat-toolbar.mat-toolbar {
+    border-radius: 0px;
+    // background: initial;
+    // box-shadow: initial;
+  }
+}

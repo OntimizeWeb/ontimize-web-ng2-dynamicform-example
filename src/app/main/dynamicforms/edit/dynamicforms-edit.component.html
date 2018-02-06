@@ -9,7 +9,7 @@
       <o-text-input attr="FORM_DESCRIPTION" fxFlex="60"></o-text-input>
     </div> -->
     <div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
-      <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" fxFlexFill>
+      <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" fxFlexFill (render)="onRender($event)">
 
       </o-dynamic-form-builder>
     </div>

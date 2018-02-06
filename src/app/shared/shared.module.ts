@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
 import { CommonModule } from '@angular/common';
+import { ActionCellRendererComponent } from './action-cell-renderer/action-cell-renderer';
 
 @NgModule({
   imports: [
@@ -8,9 +9,11 @@ import { CommonModule } from '@angular/common';
     OntimizeWebModule
   ],
   declarations: [
+    ActionCellRendererComponent
   ],
   exports: [
-    CommonModule
+    CommonModule,
+    ActionCellRendererComponent
   ]
 })
 export class SharedModule { }

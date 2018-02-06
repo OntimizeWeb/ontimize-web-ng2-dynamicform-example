@@ -3,7 +3,9 @@ import {
   forwardRef,
   NgZone,
   ChangeDetectorRef,
-  ElementRef
+  ElementRef,
+  ViewEncapsulation,
+  Component
 } from '@angular/core';
 
 import {
@@ -13,22 +15,30 @@ import {
 
 import {
   OComponent,
-  OFormComponent
+  OFormComponent,
+  OntimizeService,
+  dataServiceFactory
 } from 'ontimize-web-ngx';
 
 import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
-@OComponent({
+@Component({
   selector: 'dynamicforms-edit-form',
   providers: [
+    { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] },
     {
       provide: OFormComponent,
       useExisting: forwardRef(() => DynamicFormsEditFormComponent)
     }
   ],
-  inputs: [
-    ...OFormComponent.DEFAULT_INPUTS_O_FORM
-  ]
+  templateUrl: './o-form.component.html',
+  inputs: OFormComponent.DEFAULT_INPUTS_O_FORM,
+  outputs: OFormComponent.DEFAULT_OUTPUTS_O_FORM,
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.o-form]': 'true',
+    '[class.fill]': 'layoutFill'
+  }
 })
 export class DynamicFormsEditFormComponent extends OFormComponent {
 

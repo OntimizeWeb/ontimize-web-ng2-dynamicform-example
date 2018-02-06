@@ -5,9 +5,6 @@
 @import 'node_modules/ontimize-web-ngx/ontimize/components/theming/all-theme.scss';
 @include o-material-theme($theme);
 
-@import 'node_modules/ontimize-web-ngx-datatable/o-datatable-theme.scss';
-@include o-datatable-theme($theme);
-
 // @import 'node_modules/ontimize-web-ngx-dynamicform-builder/o-dynamic-form-builder-theme.scss';
 // @include o-dynamic-form-builder-theme($theme);
 

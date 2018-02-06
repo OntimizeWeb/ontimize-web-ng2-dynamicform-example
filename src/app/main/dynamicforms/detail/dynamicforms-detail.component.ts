@@ -21,6 +21,8 @@ import {
 })
 export class DynamicFormsDetailComponent implements OnInit {
 
+  jsonData: any;
+
   @ViewChild('oForm')
   form: OFormComponent;
 
@@ -45,10 +47,16 @@ export class DynamicFormsDetailComponent implements OnInit {
   ngOnInit() { }
 
   onFormDataLoaded(data) {
+    try {
+      this.jsonData = JSON.parse(data.JSON);
+    } catch (e) {
+
+    }
     this.dynamicForm.queryData({
       'VERSION_ID': data['VERSION_ID']
     });
   }
+
   onDynamicFormDataLoaded(data) {
     (this.form as any)._updateFormData(this.form.formData);
   }
