@@ -1,7 +1,9 @@
 dynamicform-detail-form form {
   overflow: auto;
+  height: calc(100% - 50px);
 }
 
-.detail-form-container {
-  min-height: 90%;
-}
+// .detail-form-container {
+//   min-height: 90%;
+//   margin-top: 64px;
+// }
