@@ -52,9 +52,7 @@
     "ontimize-web-ngx-theming": "1.0.6"
   },
   "devDependencies": {
-    "moment": "2.19.3",
     "ontimize-web-ngx-tools": "1.0.3",
-    "jquery": "^3.0.0",
     "@angular/cli": "1.7.3",
     "@angular/compiler-cli": "5.2.9",
     "@types/jasmine": "2.5.38",
