@@ -21,7 +21,6 @@
       "styles": [
         "../node_modules/ng2-dnd/bundles/style.css",
         "../node_modules/ontimize-web-ngx/ontimize.scss",
-        "../node_modules/ontimize-web-ngx-datatable/styles.scss",
         "../node_modules/ontimize-web-ngx-dynamicform/styles.scss",
         "../node_modules/ontimize-web-ngx-dynamicform-builder/styles.scss",
         "../node_modules/flag-icon-css/sass/flag-icon.scss",
