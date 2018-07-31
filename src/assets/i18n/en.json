@@ -11,5 +11,22 @@
   "CREATION_DATE": "Date",
   "LAST_MODIFICATION_DATE": "Last modification",
   "DATA_ID": "ID",
-  "FORM_VERSION_ID": "Form version"
+  "FORM_VERSION_ID": "Form version",
+  "LOGIN": {
+    "IMPRINT": "Imprint",
+    "HEADER_1": "BIC Cloud - New dimensions in BPM",
+    "HEADER_2": "Simple. Smart. Cloud.",
+    "LOGIN_BUTTON": "Login",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "MSG_AUTH_FAILED": "Login failed! Recheck your credentials and try again!",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "CHANGE_PASSWORD_HEADER": "CHANGE YOUR PASSWORD",
+    "CHANGE_PASSWORD_BODY":
+      "To change your password, enter your current password in the field below. Afterwards, enter your new password, retype it for verification and click CHANGE PASSWORD.",
+    "PASSWORD_REQUIRED": "Password is required",
+    "USER_PASS_INCORRECT": "Invalid credentials",
+    "USEREMAIL": "Email address",
+    "USEREMAIL_REQUIRED": "User email is required"
+  }
 }
