@@ -1,0 +1,200 @@
+@import 'node_modules/@angular/material/theming';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+$bicm-blue: (
+    50: #0099f9,
+    100: #008ae0,
+    200: #007ac6,
+    300: #006aad,
+    400: #005b93,
+    500: #004B7A,
+    600: #003b60,
+    700: #002c47,
+    800: #001c2d,
+    900: #000c14,
+    A100: #14a4ff,
+    A200: #2daeff,
+    A400: #47b8ff,
+    A700: #FFFFFF,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$bicm-blue-light: (
+    50: #89b3ce,
+    100: #77a8c6,
+    200: #659cbf,
+    300: #5291b7,
+    400: #4684aa,
+    500: #3F7698,
+    600: #386886,
+    700: #305a74,
+    800: #294c62,
+    900: #213e50,
+    A100: #9bbfd5,
+    A200: #adcadd,
+    A400: #bfd6e4,
+    A700: #1a303e,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$bicm-green: (
+    50: #add799,
+    100: #9fd087,
+    200: #90c975,
+    300: #81c163,
+    400: #73ba50,
+    500: #66AD44,
+    600: #5b9b3d,
+    700: #508836,
+    800: #46762e,
+    900: #3b6427,
+    A100: #bcdeac,
+    A200: #cbe5be,
+    A400: #d9edd0,
+    A700: #305120,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+/* Color definitions */
+$mat-custom-primary: (
+  50: #bdf5b3,
+  100: #82eb6f,
+  200: #57e53e,
+  300: #33c11a,
+  400: #2ca617,
+  500: #258b13,
+  600: #1e700f,
+  700: #17550c,
+  800: #103a08,
+  900: #081f04,
+  A100: #bdf5b3,
+  A200: #82eb6f,
+  A400: #2ca617,
+  A700: #17550c,
+
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: white,
+    400: white,
+    500: $white-87-opacity,
+    600: $white-87-opacity,
+    700: $white-87-opacity,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$primary: mat-palette($bicm-blue);
+/*$accent:  mat-palette($bicm-blue-light);*/
+$accent:  mat-palette($bicm-green);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-red); 
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: mat-light-theme($primary, $accent, $warn);
+
+/* Dark theme */
+/*$theme: mat-dark-theme($primary, $accent, $warn);*/
+
+/* Include all theme styles for the components.*/
+@include angular-material-theme($theme);
+
+
+@mixin bic-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $currentColor :  mat-color($primary,900);
+
+  .o-app-sidenav{
+    .application-sidenav-sidenav{
+      background: #ffffff; 
+      
+      .application-sidenav-menugroup.active {
+        background: mat-color($primary, 500);
+        + .application-sidenav-menugroup-items-container ul {
+          background: #ffffff;
+          box-shadow: none;
+        }
+      }
+      .application-sidenav-item .application-sidenav-viewer-sidenav-item-selected{
+          color: mat-color($primary,900);
+      }
+      .application-sidenav-item,,.application-sidenav-item:focus{
+        color: mat-color($primary,900);
+         > a,
+         > a.is-selected,
+         > a:hover,
+         > a:focus{
+          color: mat-color($primary, 900);
+          //background-color:#dddbdb;
+        }
+      }
+
+     }
+    }
+
+    .ontimize-table.o-table .expandable-container{
+      border-radius: 0px;
+    }
+  }
+
+  
+
+
+

@@ -8,11 +8,9 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
 
-  .main-sidenav {
-    mat-sidenav {
-      background-color: mat-color($primary);
-      color: mat-color($primary, default-contrast);
-    }
+  .application-sidenav-item  {
+    background-color: mat-color(#ffffff);
+    color: mat-color($primary, default-contrast);
   }
 
 }

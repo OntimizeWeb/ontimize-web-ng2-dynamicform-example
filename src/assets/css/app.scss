@@ -1,18 +1,22 @@
-@import 'documentation.scss';
+//@import 'documentation.scss';
 
 @import 'node_modules/ontimize-web-ngx-theming/src/themes/ontimize.scss';
+
 
 @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
 @include ontimize-theme-styles($theme);
 
 @import 'node_modules/ontimize-web-ngx/theme.scss';
+
+
+
+@import 'bic-cloud-theme.scss';
 @include o-material-theme($theme);
+@include bic-theme($theme);
 
-// @import 'node_modules/ontimize-web-ngx-dynamicform-builder/o-dynamic-form-builder-theme.scss';
-// @include o-dynamic-form-builder-theme($theme);
+//@import '../../app/main/main-theme.scss';
 
-@import '../../app/main/main-theme.scss';
-@include main-theme($theme);
+//@include main-theme($theme);
 
 .container-title {
     color: rgba(0, 0, 0, 0.54);

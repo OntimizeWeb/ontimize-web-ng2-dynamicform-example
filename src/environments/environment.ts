@@ -7,5 +7,6 @@ export const environment = {
   // apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/dynamic-web-form-wsrest',
   // apiEndpoint: 'http://imatia211:8150/dynamic-web-form-wsrest',
   apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/dynamic-web-form-wsrest',
+  //apiEndpoint: 'http://37.139.121.180:9090/bic-cloud-dynamic-form-wsrest',
   production: false
 };
