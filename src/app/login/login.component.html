@@ -32,7 +32,7 @@
 
 </div>-->
 
-<div class="login-container" ng-app="ngAnimate">
+<div class="login-container" ng-app="ngAnimate" >
   <div class="bg">
   </div>
   <object class="logo" data="assets/images/svg/bic-cloud-logo-login.svg" type="image/svg+xml"></object>
@@ -40,19 +40,19 @@
   <div class="content">
     <h1>{{ 'LOGIN.HEADER_1' | translate }}</h1>
     <h2>{{ 'LOGIN.HEADER_2' | translate }}</h2>
-    <div class="login-container" [@shake]="loginFailed">
+    <div class="login-container" >
       <div class="login-error" *ngIf="loginFailed">
         {{ 'LOGIN.MSG_AUTH_FAILED' | translate }}
       </div>
       
       <form class="login-form"  [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="email-container">
-          <input matInput #user placeholder="{{ 'USERNAME' | translate }}" id="username" formControlName="username">
+          <input #user placeholder="{{ 'USERNAME' | translate }}" id="username" formControlName="username">
           <div id="errorUserName" *ngIf="loginForm.submitted && !user.valid" class="help-block">{{ 'LOGIN.USEREMAIL_REQUIRED' | translate }}</div>
           <div class="alert alert-error" *ngIf="error">{{ 'LOGIN.USER_PASS_INCORRECT' | translate }}</div>
         </div>
         <div class="password-container">
-          <input matInput #password placeholder="{{ 'PASSWORD' | translate }}" id="password" type="password" formControlName="password">
+          <input #password placeholder="{{ 'PASSWORD' | translate }}" id="password" type="password" formControlName="password">
           <div id="errorPass" *ngIf="loginForm.submitted && !pass.valid" class="help-block">{{ 'LOGIN.PASSWORD_REQUIRED' | translate }}</div>
         </div>
         <button type="submit">{{ 'LOGIN.LOGIN_BUTTON' | translate }}</button>

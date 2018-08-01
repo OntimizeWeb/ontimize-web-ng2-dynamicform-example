@@ -2,15 +2,34 @@ import { Component, OnInit, Inject, NgZone, Injector } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { LoginService, NavigationService } from 'ontimize-web-ngx';
 import { APP_CONFIG, Config } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'login',
   styleUrls: ['./login.component.scss'],
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  animations: [
+    trigger('shake', [
+      state('0', style({ transform: 'translateX(0)' })),
+      state('1', style({ transform: 'translateX(0)' })),
+      transition('0 => 1', [
+        animate(500, keyframes([
+          style({ transform: 'translateX(-5px)' }),
+          style({ transform: 'translateX(5px)' }),
+          style({ transform: 'translateX(-5px)' }),
+          style({ transform: 'translateX(5px)' }),
+          style({ transform: 'translateX(-5px)' }),
+          style({ transform: 'translateX(2px)' }),
+          style({ transform: 'translateX(-2px)' }),
+          style({ transform: 'translateX(2px)' }),
+        ]))
+      ])
+    ])
+  ]
 })
+
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
