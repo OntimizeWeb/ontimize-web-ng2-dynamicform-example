@@ -164,6 +164,9 @@ $theme: mat-light-theme($primary, $accent, $warn);
   .o-app-sidenav{
     .application-sidenav-sidenav{
       background: #ffffff; 
+      .sidenav-toggle{
+        color: mat-color($primary,500);
+      }
       
       .application-sidenav-menugroup.active {
         background: mat-color($primary, 500);
@@ -175,6 +178,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
       .application-sidenav-item .application-sidenav-viewer-sidenav-item-selected{
           color: mat-color($primary,900);
       }
+
       .application-sidenav-item,,.application-sidenav-item:focus{
         color: mat-color($primary,900);
          > a,
@@ -182,17 +186,22 @@ $theme: mat-light-theme($primary, $accent, $warn);
          > a:hover,
          > a:focus{
           color: mat-color($primary, 900);
-          //background-color:#dddbdb;
+       
         }
       }
 
-     }
+      .o-app-sidenav-image .application-sidenav-image-container .application-sidenav-image {
+        width: 100%;
+        height: 100%;
+      }
+
     }
 
     .ontimize-table.o-table .expandable-container{
       border-radius: 0px;
     }
   }
+}
 
   
 
