@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        { "glob": "**/*", "input": "../node_modules/ontimize-web-ngx/assets/", "output": "./assets/" },
         "favicon.ico"
       ],
       "index": "index.html",
