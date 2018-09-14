@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-dynamicform-example",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -46,13 +46,13 @@
     "reflect-metadata": "0.1.12",
     "typescript": "2.4.2",
     "webpack": "3.11.0",
-    "ontimize-web-ngx": "3.0.0-rc.0",
-    "ontimize-web-ngx-dynamicform": "3.0.0-rc.0",
-    "ontimize-web-ngx-dynamicform-builder": "3.0.0-rc.0",
-    "ontimize-web-ngx-theming": "1.1.0"
+    "ontimize-web-ngx": "3.0.1",
+    "ontimize-web-ngx-dynamicform": "3.0.0",
+    "ontimize-web-ngx-dynamicform-builder": "3.0.0",
+    "ontimize-web-ngx-theming": "1.1.2"
   },
   "devDependencies": {
-    "ontimize-web-ngx-tools": "1.0.3",
+    "ontimize-web-ngx-tools": "1.0.6",
     "@angular/cli": "1.7.3",
     "@angular/compiler-cli": "5.2.10",
     "@types/jasmine": "2.5.38",
