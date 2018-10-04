@@ -52,9 +52,9 @@ export class DynamicFormsDetailComponent implements OnInit {
     } catch (e) {
 
     }
-    this.dynamicForm.queryData({
-      'VERSION_ID': data['VERSION_ID']
-    });
+    // this.dynamicForm.queryData({
+    //   'VERSION_ID': data['VERSION_ID']
+    // });
   }
 
   onDynamicFormDataLoaded(data) {

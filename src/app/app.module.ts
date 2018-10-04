@@ -2,8 +2,6 @@ import { NgModule, Injector } from '@angular/core';
 
 import { APP_CONFIG, ONTIMIZE_PROVIDERS, ONTIMIZE_MODULES } from 'ontimize-web-ngx';
 
-import { TranslateModule } from '@ngx-translate/core';
-
 import { CONFIG } from './app.config';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';

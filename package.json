@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-dynamicform-example",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -8,12 +8,9 @@
     "aot": "npm run clean:all && npm run aot:compile && npm run aot:bundle && npm run styles",
     "aot:bundle": "webpack --config config/webpack-aot.config.js --bail",
     "aot:compile": "node_modules/.bin/ngc -p tsconfig.aot.json",
-    "start": "ng serve",
+    "start": "ng serve --port 4257",
     "start-aot": "npm run clean:all && npm run aot:compile && ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
     "clean": "rimraf dist",
     "clean:aot": " rimraf src/node_modules && rimraf src/app/**/*.ngfactory.ts && rimraf src/app/**/*.ngsummary.json && rimraf src/app/**/*.ngstyle.ts && rimraf src/app/**/*.d.ts",
     "clean:all": "npm run clean && npm run clean:aot",
@@ -46,10 +43,10 @@
     "reflect-metadata": "0.1.12",
     "typescript": "2.4.2",
     "webpack": "3.11.0",
-    "ontimize-web-ngx": "3.0.1",
-    "ontimize-web-ngx-dynamicform": "3.0.0",
-    "ontimize-web-ngx-dynamicform-builder": "3.0.0",
-    "ontimize-web-ngx-theming": "1.1.2"
+    "ontimize-web-ngx": "3.1.0",
+    "ontimize-web-ngx-dynamicform": "3.1.0",
+    "ontimize-web-ngx-dynamicform-builder": "3.1.0",
+    "ontimize-web-ngx-theming": "1.2.0"
   },
   "devDependencies": {
     "ontimize-web-ngx-tools": "1.0.6",

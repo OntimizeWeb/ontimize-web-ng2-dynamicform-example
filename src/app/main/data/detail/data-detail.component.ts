@@ -29,12 +29,6 @@ export class DataDetailComponent implements OnInit {
 
   ngOnInit() { }
 
-  onFormDataLoaded(data) {
-    this.dynamicForm.queryData({
-      'VERSION_ID': data['FORM_VERSION_ID']
-    });
-  }
-
   onDynamicFormDataLoaded(data) {
     this.form.reloadStoredData();
   }
