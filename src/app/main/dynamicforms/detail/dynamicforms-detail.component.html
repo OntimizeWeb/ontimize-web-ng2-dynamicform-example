@@ -8,7 +8,7 @@
         editable-detail="false" columns="VERSION_NAME">
 
         <div fxLayout="column">
-          <o-dynamic-form query-on-init="false" #oDynamicForm attr="JSON" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)">
+          <o-dynamic-form parent-keys="VERSION_ID:VERSION_ID" query-on-init="false" #oDynamicForm attr="JSON" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)">
           </o-dynamic-form>
         </div>
 
