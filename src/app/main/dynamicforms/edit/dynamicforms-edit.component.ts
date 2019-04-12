@@ -1,43 +1,34 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
-import {
-  OFormComponent
-} from 'ontimize-web-ngx';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
-import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder/index';
 import { DynamicFormsEditFormComponent } from './dynamicforms-edit.form.component';
 
 @Component({
   selector: 'dynamicforms-edit',
   templateUrl: './dynamicforms-edit.component.html',
   styleUrls: ['./dynamicforms-edit.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.dynamicforms-edit]': 'true'
+  }
 })
-export class DynamicFormsEditComponent implements OnInit {
+export class DynamicFormsEditComponent {
 
   @ViewChild('oForm')
-  form: DynamicFormsEditFormComponent;
+  public form: DynamicFormsEditFormComponent;
 
   @ViewChild('oDynamicFormBuilder')
-  dynamicFormBuilder: ODynamicFormBuilderComponent;
+  public dynamicFormBuilder: ODynamicFormBuilderComponent;
 
-  dynamicFormDefinition: Object = {};
+  public dynamicFormDefinition: Object = {};
 
-  constructor() { }
-
-  ngOnInit() { }
-
-  ngAfterViewInit() {
+  public ngAfterViewInit(): void {
     if (this.form && this.dynamicFormBuilder) {
       this.form.setFormBuilder(this.dynamicFormBuilder);
     }
   }
 
-  onRender(arg) {
+  public onRender(arg: any): void {
     console.log(arg);
   }
 

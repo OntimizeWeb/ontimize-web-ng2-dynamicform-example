@@ -1,40 +1,13 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+<div fxFill>
+  <div fxLayout fxLayoutAlign="center stretch" fxFlex="90">
 
+    <dynamicforms-data-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" query-on-init="no" header-actions="R"
+      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA" class="mat-elevation-z4" fxFlex="85">
 
-  <div fxLayout="row" fxLayoutAlign="center" fxFlex="90">
-    <!--entity="EUsers" keys="USER_"-->
-     <!---->
-    <!--<dynamicforms-data-form #oForm fxLayout="column"
-      query-on-init="false"
-      entity="EData"
-      keys="DATA_ID;FORM_VERSION_ID"
-      parent-keys="FORM_VERSION_ID:VERSION_ID"
-      show-header="yes"
-      header-mode="none"
-      label-header=""
-      header-actions=""
-      columns="FORM_VERSION_ID;DATA_ID"
-      fxFlex="85" class="mat-elevation-z4">
+      <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)"
+        fxFill>
+      </o-dynamic-form>
 
-      <div fxLayout="column">
-        <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID"></o-dynamic-form>
-      </div>
-    </dynamicforms-data-form>-->
-
-
-
-    <dynamicforms-data-form #oForm fxLayout="column" query-on-init="false" entity="EData"
-      keys="DATA_ID;FORM_VERSION_ID" show-header="yes"
-      header-mode="none" label-header="" header-actions="R"
-      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA"
-      fxFlex="85" class="mat-elevation-z4">
-
-      <div fxLayout="column">
-        <o-dynamic-form #dynamicForm automatic-binding="no" query-on-init="true" attr="JSON"
-          entity="EDynamicFormsVersions" keys="VERSION_ID"
-          (render)="onDynamicFormDataLoaded($event)">
-        </o-dynamic-form>
-      </div>
     </dynamicforms-data-form>
 
   </div>

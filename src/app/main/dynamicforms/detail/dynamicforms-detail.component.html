@@ -1,26 +1,13 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
-  <!-- <o-form-container breadcrumb="no" breadcrumb-label-columns="VERSION_NAME" fxFlexFill> -->
-  <div fxLayout="column" fxLayoutAlign="center top" fxFlexFill>
-    <div fxLayout="row" fxLayoutAlign="center" fxFlex="90" class="detail-form-container">
+<div fxLayoutAlign="center top" fxFill>
+  <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="90">
 
-      <dynamicform-detail-form #oForm fxLayout="column" entity="EDynamicFormsVersions" keys="VERSION_ID" show-header="yes" header-mode="none"
-        label-header="" header-actions="R;U" fxFlex="85" class="mat-elevation-z4" (onFormDataLoaded)="onFormDataLoaded($event)"
-        editable-detail="false" columns="VERSION_NAME">
+    <dynamicform-detail-form #oForm entity="EDynamicFormsVersions" keys="VERSION_ID" header-actions="R;U" editable-detail="no" columns="VERSION_NAME"
+      (onFormDataLoaded)="onFormDataLoaded($event)" class="mat-elevation-z4" fxFlex="85">
 
-        <div fxLayout="column">
-          <o-dynamic-form parent-keys="VERSION_ID:VERSION_ID" query-on-init="false" #oDynamicForm attr="JSON" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)">
-          </o-dynamic-form>
-        </div>
+      <o-dynamic-form #oDynamicForm attr="JSON" parent-keys="VERSION_ID:VERSION_ID" query-on-init="no" automatic-binding="no"
+        (render)="onDynamicFormDataLoaded($event)" fxFill></o-dynamic-form>
 
-      </dynamicform-detail-form>
+    </dynamicform-detail-form>
 
-
-
-    </div>
-    <!--
-    <div fxLayout="row" fxLayoutAlign="center" fxFlex="90" style="margin-top: 64px;">
-      <td> {{ jsonData | json }} </td>
-    </div> -->
   </div>
 </div>
-<!-- </o-form-container> -->

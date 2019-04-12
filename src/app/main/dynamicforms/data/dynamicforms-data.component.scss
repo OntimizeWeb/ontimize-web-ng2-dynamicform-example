@@ -1,4 +1,15 @@
-dynamicforms-data-form form {
-  overflow: auto;
-  height: calc(100% - 50px);
+.dynamicforms-data {
+  display: block;
+  height: 100%;
+
+  dynamicforms-data-form.o-form {
+    ng-host {
+      height: calc(100% - 66px);
+
+      form.inner-form,
+      form.inner-form .o-form-content-wrapper {
+        height: 100%;
+      }
+    }
+  }
 }

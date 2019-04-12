@@ -1,13 +1,15 @@
 dynamicforms-new-form {
   ng-host {
-    height: 100%;
+    flex: 1 1 100%;
   }
+
   form {
-    overflow: auto;
+    //     overflow: auto;
     height: calc(100% - 50px);
-    .o-form-content-wrapper{
+
+    .o-form-content-wrapper {
       height: 100%;
-      padding: 0;
+      //       padding: 0;
     }
   }
 }

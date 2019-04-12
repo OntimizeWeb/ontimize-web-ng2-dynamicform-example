@@ -1,18 +1,14 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+<!-- LAST_MODIFICATION_DATE -->
+<o-table #table fxFlexFill title="DYNAMICFORMS" columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
+  visible-columns="FORM_NAME;FORM_DESCRIPTION;CREATION_DATE;VERSION_ID" sort-columns="CREATION_DATE:desc" pageable="no" pagination-controls="no"
+  entity="EDynamicForms" keys="VERSION_ID" row-height="small" delete-button="no" fixed-header="yes" fxFill>
 
-  <!-- LAST_MODIFICATION_DATE -->
-  <o-table #table fxFlexFill title="DYNAMICFORMS" columns="FORM_ID;FORM_NAME;FORM_DESCRIPTION;VERSION_ID;VERSION_NAME;CREATION_DATE;JSON"
-    visible-columns="FORM_NAME;FORM_DESCRIPTION;CREATION_DATE;VERSION_ID" sort-columns="CREATION_DATE:desc" pageable="no" pagination-controls="no"
-    entity="EDynamicForms" keys="VERSION_ID" row-height="small" delete-button="no">
+  <!-- detail-button-in-row="yes" edit-button-in-row="yes" -->
+  <!-- <o-table-column attr="VERSION_ID" title="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered"></o-table-column> -->
+  <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
+  <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
+  <o-table-column attr="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered">
+    <action-cell-renderer (onClick)="addDynamicFormData($event)" icon="storage"></action-cell-renderer>
+  </o-table-column>
 
-    <!-- detail-button-in-row="yes" edit-button-in-row="yes" -->
-    <!-- <o-table-column attr="VERSION_ID" title="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered"></o-table-column> -->
-    <o-table-column attr="CREATION_DATE" title="CREATION_DATE" type="date" format="LLL"></o-table-column>
-    <o-table-column attr="LAST_MODIFICATION_DATE" title="LAST_MODIFICATION_DATE" type="date" format="LLL"></o-table-column>
-    <o-table-column attr="VERSION_ID" orderable="no" width="10%" class="o-table-column-centered">
-      <action-cell-renderer (onClick)="addDynamicFormData($event)" icon="storage"></action-cell-renderer>
-    </o-table-column>
-
-  </o-table>
-
-</div>
+</o-table>

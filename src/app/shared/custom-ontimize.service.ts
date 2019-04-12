@@ -1,8 +1,7 @@
 import { Injector } from '@angular/core';
+import { OntimizeService, Util } from 'ontimize-web-ngx';
 import { Observable } from 'rxjs';
 import { share } from 'rxjs/operators';
-
-import { OntimizeService } from 'ontimize-web-ngx';
 
 export class CustomOntimizeService extends OntimizeService {
 
@@ -11,70 +10,63 @@ export class CustomOntimizeService extends OntimizeService {
   }
 
   public insertDynamicForm(av: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
-    entity = (this.isNullOrUndef(entity)) ? this.entity : entity;
+    const url = this._urlBase + '/insertDynamicForm';
 
-    av = (this.isNullOrUndef(av)) ? this.av : av;
-    sqltypes = (this.isNullOrUndef(sqltypes)) ? this.sqltypes : sqltypes;
-
-    var url = this._urlBase + '/insertDynamicForm';
-
-    const options = {
-      headers: this.buildHeaders()
-    };
-    var body = JSON.stringify({
-      user: this._user,
-      sessionid: this._sessionid,
-      entity: entity,
-      av: av,
-      sqltypes: sqltypes
-    });
-    const self = this;
-    let innerObserver: any;
-    const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
-
-    this.httpClient.post(url, body, options).subscribe(resp => {
-      self.responseParser.parseSuccessfulResponse(resp, innerObserver, this);
-    }, error => {
-      self.responseParser.parseUnsuccessfulResponse(error, innerObserver, this);
-    },
-      () => innerObserver.complete());
-    return dataObservable;
-  }
-
-  public updateDynamicFormVersion(kv: Object = {}, av: Object = {},
-    entity?: string, sqltypes?: Object): Observable<any> {
-
-    entity = (this.isNullOrUndef(entity)) ? this.entity : entity;
-
-    kv = (this.isNullOrUndef(kv)) ? this.kv : kv;
-    av = (this.isNullOrUndef(av)) ? this.av : av;
-    sqltypes = (this.isNullOrUndef(sqltypes)) ? this.sqltypes : sqltypes;
-
-    const url = this._urlBase + '/updateDynamicFormVersion';
+    entity = Util.isDefined(entity) ? entity : this.entity;
+    av = Util.isDefined(av) ? av : this.av;
+    sqltypes = Util.isDefined(sqltypes) ? sqltypes : this.sqltypes;
 
     const options = {
       headers: this.buildHeaders()
     };
-
     const body = JSON.stringify({
       user: this._user,
       sessionid: this._sessionid,
-      entity: entity,
-      kv: kv,
-      av: av,
-      sqltypes: sqltypes
+      entity,
+      av,
+      sqltypes
     });
 
-    const self = this;
     let innerObserver: any;
     const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
 
-    this.httpClient.post(url, body, options).subscribe(resp => {
-      self.responseParser.parseSuccessfulResponse(resp, innerObserver, this);
-    }, error => {
-      self.responseParser.parseUnsuccessfulResponse(error, innerObserver, this);
-    },
-      () => innerObserver.complete());
+    this.httpClient.post(url, body, options).subscribe(
+      resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
+      error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
+      () => innerObserver.complete()
+    );
+
+    return dataObservable;
+  }
+
+  public updateDynamicFormVersion(kv: Object = {}, av: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
+    const url = this._urlBase + '/updateDynamicFormVersion';
+
+    entity = Util.isDefined(entity) ? entity : this.entity;
+    kv = Util.isDefined(kv) ? kv : this.kv;
+    av = Util.isDefined(av) ? av : this.av;
+    sqltypes = Util.isDefined(sqltypes) ? sqltypes : this.sqltypes;
+
+    const options = {
+      headers: this.buildHeaders()
+    };
+    const body = JSON.stringify({
+      user: this._user,
+      sessionid: this._sessionid,
+      entity,
+      kv,
+      av,
+      sqltypes
+    });
+
+    let innerObserver: any;
+    const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
+
+    this.httpClient.post(url, body, options).subscribe(
+      resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
+      error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
+      () => innerObserver.complete()
+    );
 
     return dataObservable;
   }

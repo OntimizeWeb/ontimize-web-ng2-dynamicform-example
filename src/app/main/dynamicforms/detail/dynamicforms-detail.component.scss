@@ -1,9 +1,15 @@
-dynamicform-detail-form form {
-  overflow: auto;
-  height: calc(100% - 50px);
-}
+.dynamicforms-detail {
+  display: block;
+  height: 100%;
 
-// .detail-form-container {
-//   min-height: 90%;
-//   margin-top: 64px;
-// }
+  dynamicform-detail-form.o-form {
+    ng-host {
+      height: calc(100% - 66px);
+
+      form,
+      form .o-form-content-wrapper {
+        height: 100%;
+      }
+    }
+  }
+}
