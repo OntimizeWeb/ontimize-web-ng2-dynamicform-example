@@ -1,58 +1,45 @@
-import {
-  ViewChild,
-  Component,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
-
-import { OFormComponent, OTableComponent } from 'ontimize-web-ngx';
-
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'dynamicforms-home',
   templateUrl: './dynamicforms-home.component.html',
   styleUrls: ['./dynamicforms-home.component.scss'],
-  encapsulation : ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
-export class DynamicFormsHomeComponent implements OnInit {
-
-  @ViewChild('table')
-  table: OTableComponent;
+export class DynamicFormsHomeComponent {
 
   constructor(
     protected router: Router,
     protected actRoute: ActivatedRoute
   ) { }
 
-  ngOnInit() { }
-
-  editDynamicFormData(item: any) {
+  public editDynamicFormData(item: any) {
     if (item.hasOwnProperty('VERSION_ID')) {
-      let route = [item['VERSION_ID']];
+      const route = [item['VERSION_ID']];
       route.push('data');
       this.router.navigate(
         route,
         {
           relativeTo: this.actRoute,
           queryParams: {
-            'isdetail': 'true'
+            isdetail: 'true'
           }
         }
       );
     }
   }
 
-  addDynamicFormData(item: any) {
+  public addDynamicFormData(item: any) {
     if (item && item.hasOwnProperty('VERSION_ID')) {
-      let route = [item['VERSION_ID']];
+      const route = [item['VERSION_ID']];
       route.push('data');
       this.router.navigate(
         route,
         {
           relativeTo: this.actRoute,
           queryParams: {
-            'isdetail': 'true'
+            isdetail: 'true'
           }
         }
       );

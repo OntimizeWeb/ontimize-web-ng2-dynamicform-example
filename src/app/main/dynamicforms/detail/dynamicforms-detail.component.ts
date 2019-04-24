@@ -1,6 +1,5 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { OFormComponent } from 'ontimize-web-ngx';
-import { ODynamicFormComponent } from 'ontimize-web-ngx-dynamicform';
 
 @Component({
   selector: 'dynamicforms-detail',
@@ -17,9 +16,6 @@ export class DynamicFormsDetailComponent {
 
   @ViewChild('oForm')
   public form: OFormComponent;
-
-  @ViewChild('oDynamicForm')
-  public dynamicForm: ODynamicFormComponent;
 
   public formDefinitionStoredPrivate = JSON.stringify({
     title: '',

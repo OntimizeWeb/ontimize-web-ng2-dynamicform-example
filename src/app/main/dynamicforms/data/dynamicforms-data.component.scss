@@ -6,9 +6,10 @@
     ng-host {
       height: calc(100% - 66px);
 
-      form.inner-form,
-      form.inner-form .o-form-content-wrapper {
+      form,
+      form .o-form-content-wrapper {
         height: 100%;
+        overflow: auto;
       }
     }
   }

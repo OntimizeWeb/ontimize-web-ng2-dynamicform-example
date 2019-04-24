@@ -1,4 +1,10 @@
-data-detail-form form {
-  overflow: auto;
-  height: calc(100% - 50px);
+.data-detail {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  data-detail-form ng-host {
+    overflow: auto;
+    height: calc(100% - 66px);
+  }
 }
