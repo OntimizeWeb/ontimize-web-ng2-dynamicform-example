@@ -1,6 +1,6 @@
 {
   "name": "ontimize-web-ngx-dynamicform-example",
-  "version": "4.0.0-rc.0",
+  "version": "4.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -41,10 +41,10 @@
     "rxjs": "6.3.3",
     "zone.js": "0.8.26",
     "reflect-metadata": "0.1.12",
-    "ontimize-web-ngx": "file:C:\\workspace\\github\\ontimize-web-ng2-VERSIONS\\4.0.0-rc.0\\ontimize-web-ngx\\dist\\ontimize-web-ngx-4.0.0-rc.0.tgz",
-    "ontimize-web-ngx-dynamicform": "file:C:\\workspace\\github\\DYNAMICFORM\\ontimize-web-ngx-dynamicform@4.0.0-rc.0\\dist\\ontimize-web-ngx-dynamicform-4.0.0-rc.0.tgz",
-    "ontimize-web-ngx-dynamicform-builder": "file:C:\\workspace\\github\\DYNAMICFORM\\ontimize-web-ngx-dynamicform-builder@4.0.0-rc.0\\dist\\ontimize-web-ngx-dynamicform-builder-4.0.0-rc.0.tgz",
-    "ontimize-web-ngx-theming": "file:C:\\workspace\\github\\THEMING\\ontimize-web-ng2-theming\\dist\\ontimize-web-ngx-theming-4.0.0.tgz"
+    "ontimize-web-ngx": "4.0.3",
+    "ontimize-web-ngx-dynamicform": "4.0.0",
+    "ontimize-web-ngx-dynamicform-builder": "4.0.0",
+    "ontimize-web-ngx-theming": "4.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
@@ -60,7 +60,7 @@
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "node-sass": "4.9.4",
-    "ontimize-web-ngx-tools": "file:C:\\workspace\\github\\TOOLS\\ontimize-web-ngx-tools\\ontimize-web-ngx-tools-2.0.0.tgz",
+    "ontimize-web-ngx-tools": "4.0.0",
     "protractor": "^5.4.1",
     "ts-node": "~2.0.0",
     "tslint": "5.2.0",
