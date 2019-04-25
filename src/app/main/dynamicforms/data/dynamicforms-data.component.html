@@ -1,14 +1,7 @@
-<div fxLayoutAlign="center top" fxFill>
-  <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="90">
+<dynamicforms-data-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" query-on-init="no" header-actions="R"
+  columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA">
 
-    <dynamicforms-data-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" query-on-init="no" header-actions="R"
-      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA" class="mat-elevation-z4" fxFlex="85">
+  <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)"
+    fxFill></o-dynamic-form>
 
-      <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)"
-        fxFill>
-      </o-dynamic-form>
-
-    </dynamicforms-data-form>
-
-  </div>
-</div>
+</dynamicforms-data-form>

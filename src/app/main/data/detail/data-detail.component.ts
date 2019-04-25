@@ -1,5 +1,4 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
-import { ODynamicFormComponent } from 'ontimize-web-ngx-dynamicform';
 
 import { DataDetailFormComponent } from './data-detail.form.component';
 
@@ -16,9 +15,6 @@ export class DataDetailComponent {
 
   @ViewChild('oForm')
   public form: DataDetailFormComponent;
-
-  @ViewChild('dynamicForm')
-  public dynamicForm: ODynamicFormComponent;
 
   public onDynamicFormDataLoaded(data: any): void {
     this.form.reloadStoredData();
