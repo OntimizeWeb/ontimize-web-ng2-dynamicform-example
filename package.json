@@ -10,12 +10,12 @@
     "aot:compile": "node_modules/.bin/ngc -p tsconfig.aot.json",
     "start": "ng serve --port 4403",
     "start-aot": "npm run clean:all && npm run aot:compile && ng serve",
-    "build": "ng build",
+    "build": "npm run clean && ng build --base-href=/ontimizeweb/dynamicform/",
     "clean": "rimraf dist",
     "clean:aot": " rimraf src/node_modules && rimraf src/app/**/*.ngfactory.ts && rimraf src/app/**/*.ngsummary.json && rimraf src/app/**/*.ngstyle.ts && rimraf src/app/**/*.d.ts",
     "clean:all": "npm run clean && npm run clean:aot",
     "production": "npm run clean && ng build --aot=false --prod --base-href ./",
-    "production-server": "npm run clean && ng build --aot=false --prod --base-href /ontimizeweb/v4/dynamicform/",
+    "production-server": "npm run clean && ng build --aot=false --prod --base-href /ontimizeweb/dynamicform/",
     "styles": "node-sass src/styles-aot.scss dist/assets/css/app.css --output-style compressed"
   },
   "private": true,
@@ -43,7 +43,7 @@
     "reflect-metadata": "0.1.12",
     "ontimize-web-ngx": "4.0.3",
     "ontimize-web-ngx-dynamicform": "4.0.0",
-    "ontimize-web-ngx-dynamicform-builder": "4.0.0",
+    "ontimize-web-ngx-dynamicform-builder": "4.0.1",
     "ontimize-web-ngx-theming": "4.0.2"
   },
   "devDependencies": {
