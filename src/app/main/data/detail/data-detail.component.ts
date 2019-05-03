@@ -1,13 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
-
-import {
-  ODynamicFormComponent
-} from 'ontimize-web-ngx-dynamicform';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 
 import { DataDetailFormComponent } from './data-detail.form.component';
 
@@ -15,21 +6,17 @@ import { DataDetailFormComponent } from './data-detail.form.component';
   selector: 'data-detail',
   templateUrl: './data-detail.component.html',
   styleUrls: ['./data-detail.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.data-detail]': 'true'
+  }
 })
-export class DataDetailComponent implements OnInit {
+export class DataDetailComponent {
 
   @ViewChild('oForm')
-  form: DataDetailFormComponent;
+  public form: DataDetailFormComponent;
 
-  @ViewChild('dynamicForm')
-  dynamicForm: ODynamicFormComponent;
-
-  constructor() { }
-
-  ngOnInit() { }
-
-  onDynamicFormDataLoaded(data) {
+  public onDynamicFormDataLoaded(data: any): void {
     this.form.reloadStoredData();
   }
 

@@ -1,23 +1,7 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+<data-detail-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" header-actions="R;U"
+  columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA" editable-detail="no">
 
+  <o-dynamic-form automatic-binding="no" query-on-init="no" attr="JSON" entity="EDynamicFormsVersions" parent-keys="VERSION_ID:FORM_VERSION_ID"
+    (render)="onDynamicFormDataLoaded($event)"></o-dynamic-form>
 
-  <div fxLayout="row" fxLayoutAlign="center" fxFlex="90">
-
-    <data-detail-form #oForm fxLayout="column" query-on-init="true" entity="EData"
-      keys="DATA_ID;FORM_VERSION_ID" show-header="yes"
-      header-mode="none" label-header="" header-actions="R;U"
-      columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA"
-      fxFlex="85" class="mat-elevation-z4" editable-detail="false">
-
-      <div fxLayout="column">
-        <o-dynamic-form #dynamicForm automatic-binding="no" query-on-init="false" attr="JSON"
-          entity="EDynamicFormsVersions" parent-keys="VERSION_ID:FORM_VERSION_ID"
-          (render)="onDynamicFormDataLoaded($event)">
-        </o-dynamic-form>
-      </div>
-    </data-detail-form>
-
-
-
-  </div>
-</div>
+</data-detail-form>

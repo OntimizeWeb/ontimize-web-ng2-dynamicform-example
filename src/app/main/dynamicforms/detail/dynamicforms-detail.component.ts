@@ -1,63 +1,44 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
-
-import {
-  OFormComponent
-} from 'ontimize-web-ngx';
-
-import {
-  ODynamicFormComponent
-} from 'ontimize-web-ngx-dynamicform';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { OFormComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'dynamicforms-detail',
   templateUrl: './dynamicforms-detail.component.html',
   styleUrls: ['./dynamicforms-detail.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.dynamicforms-detail]': 'true'
+  }
 })
-export class DynamicFormsDetailComponent implements OnInit {
+export class DynamicFormsDetailComponent {
 
-  jsonData: any;
+  public jsonData: any;
 
   @ViewChild('oForm')
-  form: OFormComponent;
+  public form: OFormComponent;
 
-  @ViewChild('oDynamicForm')
-  dynamicForm: ODynamicFormComponent;
-
-  formDefinitionStoredPrivate = JSON.stringify({
-    'title': '',
-    'components': []
+  public formDefinitionStoredPrivate = JSON.stringify({
+    title: '',
+    components: []
   });
 
   set formDefinitionStored(val) {
     this.formDefinitionStoredPrivate = val;
   }
 
-  get formDefinitionStored() {
+  get formDefinitionStored(): string {
     return this.formDefinitionStoredPrivate;
   }
 
-  constructor() { }
-
-  ngOnInit() { }
-
-  onFormDataLoaded(data) {
+  public onFormDataLoaded(data: any): void {
     try {
       this.jsonData = JSON.parse(data.JSON);
     } catch (e) {
-
+      //
     }
-    // this.dynamicForm.queryData({
-    //   'VERSION_ID': data['VERSION_ID']
-    // });
   }
 
-  onDynamicFormDataLoaded(data) {
+  public onDynamicFormDataLoaded(data: any): void {
     (this.form as any)._updateFormData(this.form.formData);
   }
 

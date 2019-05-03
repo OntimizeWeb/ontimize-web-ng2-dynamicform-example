@@ -1,18 +1,6 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
+<dynamicforms-edit-form #oForm columns="VERSION_ID;JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" update-method="updateDynamicFormVersion"
+  fxFill>
 
-  <dynamicforms-edit-form #oForm fxFlexFill fxLayout="column" show-header="yes" columns="VERSION_ID;JSON" entity="EDynamicFormsVersions"
-    keys="VERSION_ID" update-method="updateDynamicFormVersion">
+  <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" (render)="onRender($event)" fxFill></o-dynamic-form-builder>
 
-    <!-- <div fxLayout="row" fxLayoutAlign="space-around center" class="form-name">
-      <o-text-input attr="FORM_NAME"></o-text-input>
-      <o-text-input attr="FORM_DESCRIPTION" fxFlex="60"></o-text-input>
-    </div> -->
-    <div fxLayout="column" fxLayoutAlign="center" fxFlexFill>
-      <o-dynamic-form-builder #oDynamicFormBuilder attr="JSON" fxFlexFill (render)="onRender($event)">
-
-      </o-dynamic-form-builder>
-    </div>
-
-  </dynamicforms-edit-form>
-
-</div>
+</dynamicforms-edit-form>

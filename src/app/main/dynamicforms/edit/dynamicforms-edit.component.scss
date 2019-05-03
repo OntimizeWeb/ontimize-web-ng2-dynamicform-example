@@ -1,13 +1,19 @@
-dynamicforms-edit-form {
-  ng-host {
-    height: 100%;
-  }
-  form {
-    overflow: auto;
-    height: calc(100% - 50px);
-    .o-form-content-wrapper{
+.dynamicforms-edit {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  dynamicforms-edit-form {
+    display: flex;
+    flex-direction: column;
+
+    ng-host {
+      flex: 1 1 100%;
+    }
+
+    form.inner-form,
+    form.inner-form .o-form-content-wrapper {
       height: 100%;
-      padding: 0;
     }
   }
 }

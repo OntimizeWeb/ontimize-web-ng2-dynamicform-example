@@ -1,31 +1,21 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
-
-import {
-  OTranslateService,
-  OFormComponent
-} from 'ontimize-web-ngx';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { OFormComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'dynamicforms-data',
   templateUrl: './dynamicforms-data.component.html',
   styleUrls: ['./dynamicforms-data.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.dynamicforms-data]': 'true'
+  }
 })
-export class DynamicFormsDataComponent implements OnInit {
+export class DynamicFormsDataComponent {
 
   @ViewChild('oForm')
-  form: OFormComponent;
+  public form: OFormComponent;
 
-  constructor() { }
-
-  ngOnInit() { }
-
-  onDynamicFormDataLoaded(data) {
+  public onDynamicFormDataLoaded(data: any): void {
     // this.form.reloadStoredData();
   }
 
