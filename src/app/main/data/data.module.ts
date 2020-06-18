@@ -1,8 +1,9 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { OntimizeWebModule } from 'ontimize-web-ngx';
-import { DataRoutingModule, DATA_MODULE_DECLARATIONS } from './data-routing.module';
 import { DynamicFormModule } from 'ontimize-web-ngx-dynamicform';
+
 import { SharedModule } from '../../shared/shared.module';
+import { DATA_MODULE_DECLARATIONS, DataRoutingModule } from './data-routing.module';
 
 @NgModule({
   imports: [

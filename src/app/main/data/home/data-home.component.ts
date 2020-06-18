@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'data-home',
@@ -6,10 +6,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./data-home.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DataHomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() { }
+export class DataHomeComponent {
 
 }

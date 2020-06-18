@@ -1,4 +1,4 @@
-import { Component, OnInit, Injector, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +6,6 @@ import { Component, OnInit, Injector, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./main.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MainComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() { }
+export class MainComponent {
 
 }

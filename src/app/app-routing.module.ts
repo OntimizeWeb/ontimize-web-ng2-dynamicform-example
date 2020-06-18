@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
-import { AuthGuardService } from 'ontimize-web-ngx';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-export const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'prefix' }
-];
+export const routes: Routes = [{ path: '', redirectTo: 'main', pathMatch: 'prefix' }];
 
 let opt = {
   enableTracing: false

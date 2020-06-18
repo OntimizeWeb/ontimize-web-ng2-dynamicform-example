@@ -1,4 +1,4 @@
-import { Component, Injector, ViewChild, TemplateRef, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Injector, TemplateRef, ViewChild } from '@angular/core';
 import { OBaseTableCellRenderer } from 'ontimize-web-ngx';
 
 export const DEFAULT_INPUTS_ACTION_CELL_RENDERER = [
@@ -24,7 +24,7 @@ export class ActionCellRendererComponent extends OBaseTableCellRenderer {
   action: string;
   _icon: string;
 
-  @ViewChild('templateref', { read: TemplateRef }) public templateref: TemplateRef<any>;
+  @ViewChild('templateref', { read: TemplateRef, static: false }) public templateref: TemplateRef<any>;
 
   constructor(protected injector: Injector) {
     super(injector);

@@ -14,7 +14,7 @@ export class DynamicFormsDetailComponent {
 
   public jsonData: any;
 
-  @ViewChild('oForm')
+  @ViewChild('oForm', { static: false })
   public form: OFormComponent;
 
   public formDefinitionStoredPrivate = JSON.stringify({

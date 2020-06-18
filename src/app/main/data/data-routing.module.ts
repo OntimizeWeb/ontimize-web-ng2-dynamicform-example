@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import { DataHomeComponent } from './home/data-home.component';
 import { DataDetailComponent } from './detail/data-detail.component';
 import { DataDetailFormComponent } from './detail/data-detail.form.component';
+import { DataHomeComponent } from './home/data-home.component';
 
 export const DATA_MODULE_DECLARATIONS = [
   DataHomeComponent,

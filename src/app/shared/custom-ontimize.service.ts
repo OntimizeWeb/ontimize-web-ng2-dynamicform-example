@@ -1,6 +1,6 @@
 import { Injector } from '@angular/core';
-import { OntimizeService, Util } from 'ontimize-web-ngx';
-import { Observable } from 'rxjs';
+import { OntimizeService, Util, ServiceResponse } from 'ontimize-web-ngx';
+import { Observable, Subscriber } from 'rxjs';
 import { share } from 'rxjs/operators';
 
 export class CustomOntimizeService extends OntimizeService {
@@ -16,27 +16,35 @@ export class CustomOntimizeService extends OntimizeService {
     av = Util.isDefined(av) ? av : this.av;
     sqltypes = Util.isDefined(sqltypes) ? sqltypes : this.sqltypes;
 
-    const options = {
-      headers: this.buildHeaders()
-    };
+    // const options = {
+    //   headers: this.buildHeaders()
+    // };
     const body = JSON.stringify({
-      user: this._user,
+      user: this.user,
       sessionid: this._sessionid,
       entity,
       av,
       sqltypes
     });
 
-    let innerObserver: any;
-    const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
+    return this.doRequest({
+      method: 'POST',
+      url: url,
+      body: body,
+      successCallback: this.parseCustomSuccessfulResponse,
+      errorCallBack: this.parseCustomUnsuccessfulResponse
+    });
 
-    this.httpClient.post(url, body, options).subscribe(
-      resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
-      error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
-      () => innerObserver.complete()
-    );
+    // let innerObserver: any;
+    // const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
 
-    return dataObservable;
+    // this.httpClient.post(url, body, options).subscribe(
+    //   resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
+    //   error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
+    //   () => innerObserver.complete()
+    // );
+
+    // return dataObservable;
   }
 
   public updateDynamicFormVersion(kv: Object = {}, av: Object = {}, entity?: string, sqltypes?: Object): Observable<any> {
@@ -47,11 +55,11 @@ export class CustomOntimizeService extends OntimizeService {
     av = Util.isDefined(av) ? av : this.av;
     sqltypes = Util.isDefined(sqltypes) ? sqltypes : this.sqltypes;
 
-    const options = {
-      headers: this.buildHeaders()
-    };
+    // const options = {
+    //   headers: this.buildHeaders()
+    // };
     const body = JSON.stringify({
-      user: this._user,
+      user: this.user,
       sessionid: this._sessionid,
       entity,
       kv,
@@ -59,16 +67,32 @@ export class CustomOntimizeService extends OntimizeService {
       sqltypes
     });
 
-    let innerObserver: any;
-    const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
+    return this.doRequest({
+      method: 'POST',
+      url: url,
+      body: body,
+      successCallback: this.parseCustomSuccessfulResponse,
+      errorCallBack: this.parseCustomUnsuccessfulResponse
+    });
 
-    this.httpClient.post(url, body, options).subscribe(
-      resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
-      error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
-      () => innerObserver.complete()
-    );
+    // let innerObserver: any;
+    // const dataObservable = new Observable(observer => innerObserver = observer).pipe(share());
 
-    return dataObservable;
+    // this.httpClient.post(url, body, options).subscribe(
+    //   resp => this.responseParser.parseSuccessfulResponse(resp, innerObserver, this),
+    //   error => this.responseParser.parseUnsuccessfulResponse(error, innerObserver, this),
+    //   () => innerObserver.complete()
+    // );
+
+    // return dataObservable;
+  }
+
+  protected parseCustomSuccessfulResponse(resp: ServiceResponse, observer: Subscriber<ServiceResponse>) {
+    this.responseParser.parseSuccessfulResponse(resp, observer, this);
+  }
+
+  protected parseCustomUnsuccessfulResponse(error: any, observer: Subscriber<ServiceResponse>) {
+    this.responseParser.parseUnsuccessfulResponse(error, observer, this);
   }
 
 }

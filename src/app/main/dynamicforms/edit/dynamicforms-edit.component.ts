@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 import { DynamicFormsEditFormComponent } from './dynamicforms-edit.form.component';
@@ -12,12 +12,12 @@ import { DynamicFormsEditFormComponent } from './dynamicforms-edit.form.componen
     '[class.dynamicforms-edit]': 'true'
   }
 })
-export class DynamicFormsEditComponent {
+export class DynamicFormsEditComponent implements AfterViewInit {
 
-  @ViewChild('oForm')
+  @ViewChild('oForm', { static: false })
   public form: DynamicFormsEditFormComponent;
 
-  @ViewChild('oDynamicFormBuilder')
+  @ViewChild('oDynamicFormBuilder', { static: false })
   public dynamicFormBuilder: ODynamicFormBuilderComponent;
 
   public dynamicFormDefinition: Object = {};

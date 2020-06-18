@@ -11,10 +11,10 @@ import { DynamicFormsNewFormComponent } from './dynamicforms-new.form.component'
 })
 export class DynamicFormsNewComponent implements AfterViewInit {
 
-  @ViewChild('oForm')
+  @ViewChild('oForm', { static: false })
   public form: DynamicFormsNewFormComponent;
 
-  @ViewChild('oDynamicFormBuilder')
+  @ViewChild('oDynamicFormBuilder', { static: false })
   public dynamicFormBuilder: ODynamicFormBuilderComponent;
 
   public ngAfterViewInit(): void {

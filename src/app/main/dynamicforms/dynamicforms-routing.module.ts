@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { DynamicFormsDataComponent } from './data/dynamicforms-data.component';
 import { DynamicFormsDataFormComponent } from './data/dynamicforms-data.form.component';

@@ -13,7 +13,7 @@ import { DataDetailFormComponent } from './data-detail.form.component';
 })
 export class DataDetailComponent {
 
-  @ViewChild('oForm')
+  @ViewChild('oForm', { static: false })
   public form: DataDetailFormComponent;
 
   public onDynamicFormDataLoaded(data: any): void {

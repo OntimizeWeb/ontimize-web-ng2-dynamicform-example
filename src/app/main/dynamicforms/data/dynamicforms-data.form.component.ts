@@ -1,20 +1,20 @@
 import { ChangeDetectorRef, Component, ElementRef, forwardRef, Injector, NgZone, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { dataServiceFactory, OFormComponent, OntimizeService } from 'ontimize-web-ngx';
+import { DEFAULT_INPUTS_O_FORM, DEFAULT_OUTPUTS_O_FORM, OFormComponent, OntimizeServiceProvider } from 'ontimize-web-ngx';
 import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 @Component({
   selector: 'dynamicforms-data-form',
   providers: [
-    { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] },
+    OntimizeServiceProvider,
     {
       provide: OFormComponent,
       useExisting: forwardRef(() => DynamicFormsDataFormComponent)
     }
   ],
   templateUrl: './o-form.component.html',
-  inputs: OFormComponent.DEFAULT_INPUTS_O_FORM,
-  outputs: OFormComponent.DEFAULT_OUTPUTS_O_FORM,
+  inputs: DEFAULT_INPUTS_O_FORM,
+  outputs: DEFAULT_OUTPUTS_O_FORM,
   encapsulation: ViewEncapsulation.None,
   host: {
     '[class.o-form]': 'true'
