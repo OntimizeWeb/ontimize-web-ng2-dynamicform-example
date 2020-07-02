@@ -1,4 +1,4 @@
 export const environment = {
-  apiEndpoint: 'https://try.imatia.com/ontimizeweb/services/dynamic-web-form-wsrest',
+  apiEndpoint: 'http://45.84.208.122:8585/dynamic-web-form-wsrest',
   production: true
 };

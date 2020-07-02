@@ -14,8 +14,8 @@
     "clean": "rimraf dist",
     "clean:aot": " rimraf src/node_modules && rimraf src/app/**/*.ngfactory.ts && rimraf src/app/**/*.ngsummary.json && rimraf src/app/**/*.ngstyle.ts && rimraf src/app/**/*.d.ts",
     "clean:all": "npm run clean && npm run clean:aot",
-    "production": "npm run clean && ng build --aot=false --prod --base-href ./",
-    "production-server": "npm run clean && ng build --aot=false --prod --base-href /ontimizeweb/dynamicform/",
+    "production": "npm run clean && ng build --prod=false --base-href ./",
+    "production-server": "npm run clean && ng build --prod=false --base-href /ontimizeweb/dynamicform/",
     "styles": "node-sass src/styles-aot.scss dist/assets/css/app.css --output-style compressed"
   },
   "private": true,
