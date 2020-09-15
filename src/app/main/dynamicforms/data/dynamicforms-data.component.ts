@@ -12,7 +12,7 @@ import { OFormComponent } from 'ontimize-web-ngx';
 })
 export class DynamicFormsDataComponent {
 
-  @ViewChild('oForm')
+  @ViewChild('oForm', { static: false })
   public form: OFormComponent;
 
   public onDynamicFormDataLoaded(data: any): void {
