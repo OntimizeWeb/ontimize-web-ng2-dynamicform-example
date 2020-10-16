@@ -15,7 +15,7 @@ import { DYNAMICFORMS_MODULE_DECLARATIONS, DynamicformsRoutingModule } from './d
     DynamicformsRoutingModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: DYNAMICFORMS_MODULE_DECLARATIONS,
+  declarations: [...DYNAMICFORMS_MODULE_DECLARATIONS],
   exports: DYNAMICFORMS_MODULE_DECLARATIONS
 })
 export class DynamicformsModule { }

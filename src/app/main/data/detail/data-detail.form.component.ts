@@ -29,8 +29,7 @@ import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-build
   outputs: DEFAULT_OUTPUTS_O_FORM,
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[class.o-form]': 'true',
-    '[class.fill]': 'layoutFill'
+    '[class.o-form]': 'true'
   }
 })
 

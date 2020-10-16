@@ -1,7 +1,7 @@
 <dynamicforms-data-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" query-on-init="no" header-actions="R"
   columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA">
 
-  <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)"
-    fxFill></o-dynamic-form>
+  <o-dynamic-form attr="JSON" entity="EDynamicFormsVersions" keys="VERSION_ID" automatic-binding="no"
+    (render)="onDynamicFormDataLoaded($event)"></o-dynamic-form>
 
 </dynamicforms-data-form>

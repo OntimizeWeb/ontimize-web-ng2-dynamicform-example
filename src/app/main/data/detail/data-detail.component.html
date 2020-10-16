@@ -1,7 +1,5 @@
 <data-detail-form #oForm entity="EData" keys="DATA_ID;FORM_VERSION_ID" header-actions="R;U"
   columns="DATA_ID;CREATION_DATE;LAST_MODIFICATION_DATE;FORM_VERSION_ID;DYNAMIC_DATA" editable-detail="no">
-
-  <o-dynamic-form automatic-binding="no" query-on-init="no" attr="JSON" entity="EDynamicFormsVersions" parent-keys="VERSION_ID:FORM_VERSION_ID"
-    (render)="onDynamicFormDataLoaded($event)"></o-dynamic-form>
-
+  <o-dynamic-form automatic-binding="no" query-on-init="no" attr="JSON" entity="EDynamicFormsVersions"
+    parent-keys="VERSION_ID:FORM_VERSION_ID" (render)="onDynamicFormDataLoaded($event)" fxLayout="column"></o-dynamic-form>
 </data-detail-form>

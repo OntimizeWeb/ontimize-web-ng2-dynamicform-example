@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, forwardRef, Injector, NgZone, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DEFAULT_INPUTS_O_FORM, DEFAULT_OUTPUTS_O_FORM, OFormComponent, OntimizeServiceProvider } from 'ontimize-web-ngx';
-import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 @Component({
   selector: 'dynamicform-detail-form',
@@ -22,8 +21,6 @@ import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-build
 })
 export class DynamicFormDetailFormComponent extends OFormComponent {
 
-  dynamicFormBuilder: ODynamicFormBuilderComponent;
-
   constructor(
     router: Router,
     actRoute: ActivatedRoute,
@@ -35,12 +32,37 @@ export class DynamicFormDetailFormComponent extends OFormComponent {
     super(router, actRoute, zone, cd, injector, elRef);
   }
 
-  registerDynamicFormComponent(dynamicForm) { }
+  update() {
+    Object.keys(this.formGroup.controls).forEach(
+      (control) => {
+        this.formGroup.controls[control].markAsTouched();
+      }
+    );
 
-  unregisterDynamicFormComponent(dynamicForm) { }
+    if (!this.formGroup.valid) {
+      this.dialogService.alert('ERROR', 'MESSAGES.FORM_VALIDATION_ERROR');
+      return;
+    }
 
-  reloadStoredData() {
-    this._updateFormData(this.formData);
+    // retrieving keys...
+    const filter = this.getKeysValues();
+
+    // retrieving values to update...
+    const values = this.getAttributesValuesToUpdate();
+    const sqlTypes = this.getAttributesSQLTypes();
+
+    if (Object.keys(values).length === 0) {
+      // Nothing to update
+      this.dialogService.alert('INFO', 'MESSAGES.FORM_NOTHING_TO_UPDATE_INFO');
+      return;
+    }
+
+    // invoke update method...
+    this.updateData(filter, values, sqlTypes).subscribe(resp => {
+      this.postCorrectUpdate(resp);
+    }, error => {
+      this.postIncorrectUpdate(error);
+    });
   }
 
 }

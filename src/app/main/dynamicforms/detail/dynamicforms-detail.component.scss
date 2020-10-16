@@ -1,16 +1,22 @@
 .dynamicforms-detail {
-  display: block;
   height: 100%;
 
-  dynamicform-detail-form.o-form {
-    ng-host {
-      height: calc(100% - 66px);
+  > .o-form {
 
-      form,
-      form .o-form-content-wrapper {
+    ng-host {
+      form.inner-form,
+      form.inner-form .o-form-content-wrapper {
         height: 100%;
-        overflow: auto;
       }
+    }
+  }
+
+  .mat-tab-label {
+    min-width: 48px;
+    // width: 20px;
+    width: 84px;
+    .mat-tab-label-content {
+      font-size: 12px;
     }
   }
 }

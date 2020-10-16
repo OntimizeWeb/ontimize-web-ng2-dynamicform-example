@@ -1,7 +1,14 @@
-<dynamicform-detail-form #oForm entity="EDynamicFormsVersions" keys="VERSION_ID" header-actions="R;U" editable-detail="no" columns="VERSION_NAME"
-  (onFormDataLoaded)="onFormDataLoaded($event)">
+<dynamicform-detail-form fxFill 
+  entity="EDynamicFormsVersions"
+  keys="VERSION_ID"
+  columns="VERSION_NAME" 
+  update-method="updateDynamicFormVersion" 
+  show-header="no"
+  (onUpdate)="formUpdated($event)">
 
-  <o-dynamic-form attr="JSON" parent-keys="VERSION_ID:VERSION_ID" query-on-init="no" automatic-binding="no" (render)="onDynamicFormDataLoaded($event)"
-    fxFill></o-dynamic-form>
+  <o-dynamic-form-builder fxFill 
+    attr="JSON"
+    edit-mode="yes">
+  </o-dynamic-form-builder>
 
 </dynamicform-detail-form>

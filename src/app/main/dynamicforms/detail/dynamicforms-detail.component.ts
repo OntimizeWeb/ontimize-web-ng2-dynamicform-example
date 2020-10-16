@@ -1,5 +1,7 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OFormComponent } from 'ontimize-web-ngx';
+import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 @Component({
   selector: 'dynamicforms-detail',
@@ -12,34 +14,21 @@ import { OFormComponent } from 'ontimize-web-ngx';
 })
 export class DynamicFormsDetailComponent {
 
-  public jsonData: any;
+  constructor(protected router: Router, protected actRoute: ActivatedRoute) { }
 
-  @ViewChild('oForm', { static: false })
-  public form: OFormComponent;
-
-  public formDefinitionStoredPrivate = JSON.stringify({
-    title: '',
-    components: []
-  });
-
-  set formDefinitionStored(val) {
-    this.formDefinitionStoredPrivate = val;
-  }
-
-  get formDefinitionStored(): string {
-    return this.formDefinitionStoredPrivate;
-  }
-
-  public onFormDataLoaded(data: any): void {
-    try {
-      this.jsonData = JSON.parse(data.JSON);
-    } catch (e) {
-      //
-    }
-  }
-
-  public onDynamicFormDataLoaded(data: any): void {
-    (this.form as any)._updateFormData(this.form.formData);
+  formUpdated(data) {
+    const route = [];
+    route.push('dynamicforms');
+    route.push(data['VERSION_ID']);
+    this.router.navigate(
+      route,
+      {
+        replaceUrl: true,
+        queryParams: {
+          isdetail: 'true'
+        }
+      }
+    );
   }
 
 }
