@@ -35,8 +35,6 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/js/domchange.js",
-              "src/assets/js/keyboard.js"
             ]
           },
           "configurations": {
