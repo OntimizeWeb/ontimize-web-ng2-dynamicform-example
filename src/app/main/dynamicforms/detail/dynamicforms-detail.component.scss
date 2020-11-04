@@ -2,11 +2,14 @@
   height: 100%;
 
   > .o-form {
-
     ng-host {
+      display: flex;
+      height: 100%;
+
       form.inner-form,
       form.inner-form .o-form-content-wrapper {
         height: 100%;
+        padding: 0;
       }
     }
   }

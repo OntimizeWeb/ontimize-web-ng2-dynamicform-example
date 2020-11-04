@@ -1,4 +1,4 @@
-<dynamicform-detail-form fxFill 
+<dynamicform-detail-form fxFlex 
   entity="EDynamicFormsVersions"
   keys="VERSION_ID"
   columns="VERSION_NAME" 
@@ -6,7 +6,7 @@
   show-header="no"
   (onUpdate)="formUpdated($event)">
 
-  <o-dynamic-form-builder fxFill 
+  <o-dynamic-form-builder fxFlex 
     attr="JSON"
     edit-mode="yes">
   </o-dynamic-form-builder>
