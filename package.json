@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "production": "ng build --prod=true --baseHref=/ontimize-web-ngx-dynamicform-example/",
-    "production-aot-server": "ng build --prod=true  --baseHref=/ontimizeweb/v8/playground/"
+    "production-aot-server-final": "ng build --prod=true  --baseHref=/ontimizeweb/v8/playground/",
+    "production-aot-server": "ng build --prod=true  --baseHref=/"
   },
   "private": true,
   "dependencies": {
