@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, forwardRef, Injector, NgZone, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DEFAULT_INPUTS_O_FORM, DEFAULT_OUTPUTS_O_FORM, OFormComponent, OntimizeServiceProvider } from 'ontimize-web-ngx';
-import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 @Component({
   selector: 'dynamicforms-data-form',
@@ -22,7 +21,6 @@ import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-build
 })
 export class DynamicFormsDataFormComponent extends OFormComponent {
 
-  dynamicFormBuilder: ODynamicFormBuilderComponent;
   inserting = false;
   constructor(
     router: Router,

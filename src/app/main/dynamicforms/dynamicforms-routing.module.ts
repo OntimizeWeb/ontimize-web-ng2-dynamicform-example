@@ -7,7 +7,6 @@ import { DynamicFormsDetailComponent } from './detail/dynamicforms-detail.compon
 import { DynamicFormDetailFormComponent } from './detail/dynamicforms-detail.form.component';
 import { DynamicFormsHomeComponent } from './home/dynamicforms-home.component';
 import { DynamicFormsNewComponent } from './new/dynamicforms-new.component';
-import { DynamicFormsNewFormComponent } from './new/dynamicforms-new.form.component';
 
 export const DYNAMICFORMS_MODULE_DECLARATIONS = [
   DynamicFormsDataComponent,
@@ -15,15 +14,14 @@ export const DYNAMICFORMS_MODULE_DECLARATIONS = [
   DynamicFormsDetailComponent,
   DynamicFormDetailFormComponent,
   DynamicFormsHomeComponent,
-  DynamicFormsNewComponent,
-  DynamicFormsNewFormComponent
+  DynamicFormsNewComponent
 ];
 
 export const routes: Routes = [
   { path: '', component: DynamicFormsHomeComponent },
   { path: 'new', component: DynamicFormsNewComponent },
   { path: ':VERSION_ID', component: DynamicFormsDetailComponent },
-  // { path: ':VERSION_ID/edit', component: DynamicFormsEditComponent },
+  { path: ':VERSION_ID/data', component: DynamicFormsDataComponent }
 ];
 
 @NgModule({

@@ -1,10 +1,20 @@
-<div fxLayout="column" fxLayoutAlign="center" fxFill>
-  <dynamicforms-new-form #oForm fxLayout="column"  columns="VERSION_ID;JSON" entity="EDynamicForms" keys="VERSION_ID"
-    insert-method="insertDynamicForm" fxFill>
-    <div fxLayout="row" fxLayoutAlign="space-around center">
+<o-form #oForm fxFlex
+  entity="EDynamicForms" 
+  keys="VERSION_ID"
+  columns="VERSION_ID;JSON" 
+  insert-method="insertDynamicForm"
+  show-header="no">
+
+  <o-dynamic-form-builder fxFlex 
+    attr="JSON"
+    edit-mode="yes" 
+    #oDynamicFormBuilder>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="36px" class="o-dynamic-form-builder-header">
       <o-text-input attr="FORM_NAME"></o-text-input>
       <o-text-input attr="FORM_DESCRIPTION" fxFlex="60"></o-text-input>
     </div>
-    <o-dynamic-form-builder attr="JSON" #oDynamicFormBuilder fxFlex></o-dynamic-form-builder>
-  </dynamicforms-new-form>
-</div>
+
+  </o-dynamic-form-builder>
+
+</o-form>

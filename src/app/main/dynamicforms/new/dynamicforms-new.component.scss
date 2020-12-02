@@ -1,15 +1,20 @@
-dynamicforms-new-form {
-  ng-host {
-    flex: 1 1 100%;
-  }
+.dynamicforms-new {
+  height: 100%;
 
-  form {
-    //     overflow: auto;
-    height: calc(100% - 50px);
-
-    .o-form-content-wrapper {
+  > .o-form {
+    ng-host {
+      display: flex;
       height: 100%;
-      //       padding: 0;
+
+      form.inner-form,
+      form.inner-form .o-form-content-wrapper {
+        height: 100%;
+        // padding: 0;      }
+      }
+    }
+
+    > ng-host > div > form > .o-form-content-wrapper {
+      padding: 0;
     }
   }
 }

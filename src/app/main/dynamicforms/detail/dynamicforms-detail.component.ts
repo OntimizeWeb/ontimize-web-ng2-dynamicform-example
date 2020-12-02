@@ -1,7 +1,5 @@
-import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OFormComponent } from 'ontimize-web-ngx';
-import { ODynamicFormBuilderComponent } from 'ontimize-web-ngx-dynamicform-builder';
 
 @Component({
   selector: 'dynamicforms-detail',

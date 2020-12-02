@@ -1,56 +1,100 @@
-@import 'documentation.scss';
+// @import 'documentation.scss';
 
-@import 'node_modules/ontimize-web-ngx-theming/src/themes/ontimize.scss';
+@import "node_modules/ontimize-web-ngx-theming/src/themes/ontimize.scss";
 
-@import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
-@include ontimize-theme-styles($theme);
+// @import 'node_modules/ontimize-web-ngx-theming/ontimize-theme.scss';
+// @include ontimize-theme-styles($theme);
 
-@import 'node_modules/ontimize-web-ngx/theme.scss';
-@include o-material-theme($theme);
+@import "node_modules/ontimize-web-ngx-theming/ontimize-theme-lite.scss";
+@include ontimize-theme-styles-lite($theme);
+
+@import "node_modules/ontimize-web-ngx/theme.scss";
+// @include o-material-theme($theme);
+@include o-material-theme($theme, $lite-typography);
 
 // @import 'node_modules/ontimize-web-ngx-dynamicform-builder/o-dynamic-form-builder-theme.scss';
 // @include o-dynamic-form-builder-theme($theme);
 
-@import '../../app/main/main-theme.scss';
+@import "../../app/main/main-theme.scss";
 @include main-theme($theme);
 
-.container-title {
-    color: rgba(0, 0, 0, 0.54);
-    font-weight: 700;
-    font-size: 18px;
+.o-app-sidenav {
+  .application-layout-content-wrapper {
+    &.header-layout {
+      top: 40px;
+    }
+  }
 }
 
-.no-padding {
-  padding: 0px !important;
+.components-tree {
+  //   .cdk-drop-list	Corresponds to the cdkDropList container.
+  // .cdk-drag	Corresponds to a cdkDrag instance.
+  // .cdk-drag-disabled	Class that is added to a disabled cdkDrag.
+  // .cdk-drag-handle	Class that is added to the host element of the cdkDragHandle directive.
+  // .cdk-drag-preview	This is the element that will be rendered next to the user's cursor as they're dragging an item in a sortable list. By default the element looks exactly like the element that is being dragged.
+  // .cdk-drag-placeholder	This is element that will be shown instead of the real element as it's being dragged inside a cdkDropList. By default this will look exactly like the element that is being sorted.
+  // .cdk-drop-list-dragging	A class that is added to cdkDropList while the user is dragging an item.
+  // .cdk-drop-list-disabled	A class that is added to cdkDropList when it is disabled.
+  // .cdk-drop-list-receiving
+
+  .cdk-drag-placeholder {
+    // background: #ccc;
+    // border: dotted 2px #999;
+  }
+
+  .cdk-drop-list-receiving {
+    // background: red;
+  }
+
+  .cdk-drop-list-dragging {
+    // background: blue;
+  }
+
+  li.app-menu-item {
+    // height: 24px;
+    // font-size: 12px;
+    // padding-top: 4px;
+    // box-sizing: border-box;
+  }
 }
 
-.section-title {
-  padding-left: 12px;
-  padding-top: 3px;
-}
-
-.o-form form.inner-form{
-  // position: initial !important;
-  bottom: 0px;
-}
-
-p.body-text{
-  text-align: justify;
-  font-weight: 400;
-  letter-spacing: 0.010em;
-  line-height: 1.6em;
-  margin: 0.8em 0 1.6em;
-}
-
-// code:not(.highlight) {
-//   color: #106CC8;
-//   margin-left: 1px;
-//   margin-right: 1px;
-//   -webkit-font-smoothing: auto;
-//   padding: 0.125em 0.35em;
-//   border-radius: 2px;
+// .container-title {
+//     color: rgba(0, 0, 0, 0.54);
+//     font-weight: 700;
+//     font-size: 18px;
 // }
 
-a {
- color: #106CC8;
-}
+// .no-padding {
+//   padding: 0px !important;
+// }
+
+// .section-title {
+//   padding-left: 12px;
+//   padding-top: 3px;
+// }
+
+// .o-form form.inner-form{
+//   // position: initial !important;
+//   bottom: 0px;
+// }
+
+// p.body-text{
+//   text-align: justify;
+//   font-weight: 400;
+//   letter-spacing: 0.010em;
+//   line-height: 1.6em;
+//   margin: 0.8em 0 1.6em;
+// }
+
+// // code:not(.highlight) {
+// //   color: #106CC8;
+// //   margin-left: 1px;
+// //   margin-right: 1px;
+// //   -webkit-font-smoothing: auto;
+// //   padding: 0.125em 0.35em;
+// //   border-radius: 2px;
+// // }
+
+// a {
+//  color: #106CC8;
+// }
